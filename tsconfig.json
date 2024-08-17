@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",           // The JavaScript version to compile to
+    "module": "CommonJS",         // Use CommonJS modules, which are required by Node.js
+    "strict": true,               // Enable all strict type-checking options
+    "esModuleInterop": true,      // Allows default imports from modules with no default export
+    "outDir": "dist",             // Output directory for compiled files
+    "rootDir": "bin",             // Root directory for TypeScript source files
+    "skipLibCheck": true          // Skip type checking of declaration files
+  },
+  "include": ["**/*"],
+  "exclude": ["node_modules"]
+}
