@@ -1,6 +1,6 @@
 {
   "name": "create-flask-react-app",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Create a flask react application quickly",
   "main": "index.js",
   "scripts": {
@@ -19,12 +19,12 @@
     "@types/ejs": "^3.1.5",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.4.0",
-    "ejs": "^3.1.10",
-    "fs-extra": "^11.2.0",
-    "inquirer": "^10.1.8",
     "typescript": "^5.5.4"
   },
   "dependencies": {
+    "ejs": "^3.1.10",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^10.1.8",
     "slugify": "^1.6.6"
   }
 }
