@@ -32,7 +32,7 @@ jobs:
           npx standard-version
           git push --follow-tags origin main
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
 
       - name: Publish to NPM
         run: npm publish
