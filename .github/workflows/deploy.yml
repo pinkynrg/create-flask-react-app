@@ -31,8 +31,9 @@ jobs:
         run: |
           npx standard-version
           git push --follow-tags origin main
-        env:
-          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+
+      - name: Install dependencies
+        run: npm run build
 
       - name: Publish to NPM
         run: npm publish
