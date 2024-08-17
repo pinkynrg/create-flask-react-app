@@ -3,7 +3,7 @@ import path from 'path';
 import ejs from 'ejs';
 import { input, confirm } from '@inquirer/prompts';
 import slugify from 'slugify';
-
+import { execSync } from 'child_process';
 
 const TEMPLATE_DIR = path.join(__dirname, '../template');
 const CURRENT_DIR = process.cwd();
@@ -16,14 +16,35 @@ const askForInput = async (data: { message: string, normalize?: boolean, default
   if (!normalize) {
     return answerRaw;
   }
-  const answer = normalizeString(answerRaw)
+  const answer = normalizeString(answerRaw);
   if (answerRaw !== answer) {
     const isOk = await confirm({ default: true, message: `${message} will be ${answer}:` });
     if (!isOk) {
       return askForInput(data);
     }
   }
-  return answer
+  return answer;
+}
+
+const checkIfPoetryExists = () => {
+  try {
+    execSync('poetry --version', { stdio: 'ignore' });
+    console.log('Poetry is installed.');
+  } catch (error) {
+    console.error('Poetry is not installed. Please install Poetry first: https://python-poetry.org/docs/#installation');
+    process.exit(1);
+  }
+}
+
+const runPoetryInstall = (projectDir: string) => {
+  try {
+    console.log('Installing dependencies using Poetry...');
+    execSync('poetry install', { cwd: projectDir, stdio: 'inherit' });
+    console.log('Dependencies installed successfully.');
+  } catch (error) {
+    console.error('Failed to install dependencies with Poetry.');
+    process.exit(1);
+  }
 }
 
 async function generate() {
@@ -67,7 +88,7 @@ readme = "README.md"
 package-mode = false
 
 [tool.poetry.dependencies]
-python = "3.12"
+python = "^3.12"
 flask = "^3.0.3"
 sqlalchemy = "^2.0.32"
 psycopg2-binary = "^2.9.9"
@@ -94,6 +115,12 @@ build-backend = "poetry.core.masonry.api"
   });
 
   console.log(`Project ${projectName} created successfully.`);
+
+  // Check if Poetry is installed
+  checkIfPoetryExists();
+
+  // Enter the project directory and run `poetry install`
+  runPoetryInstall(projectDir);
 }
 
 generate();
