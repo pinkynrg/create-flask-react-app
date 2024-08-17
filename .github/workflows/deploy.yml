@@ -22,13 +22,17 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - uses: actions/checkout@v2
-      - name: Configure committer
+      - name: Configure Git
         run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "<>"
-      - name: Bump version
-        uses: qzb/standard-version-action@v1.0.5
+          git config --global user.email "<>"
+          git config --global user.name "GitHub Actions"
+
+      - name: Generate version and changelog
+        run: |
+          npx standard-version
+          git push --follow-tags origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
 
       - name: Publish to NPM
         run: npm publish
