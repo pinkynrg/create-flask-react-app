@@ -69,6 +69,7 @@ async function generate() {
   // Define the content of the .env file
   const envContent = `
 PROJECT_NAME=${projectName}
+POSTGRES_HOST=127.0.0.1
 POSTGRES_USER=${postgresUser}
 POSTGRES_PASSWORD=${postgresPassword}
 POSTGRES_DB=${postgresDatabase}
