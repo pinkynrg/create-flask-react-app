@@ -10,9 +10,9 @@ const CURRENT_DIR = process.cwd();
 
 const normalizeString = (str: string) => slugify(str, { lower: true, strict: true });
 
-const askForInput = async (data: { message: string, normalize?: boolean, defaultValue?: string }) => {
-  const { message, normalize = false, defaultValue = undefined } = data
-  const answerRaw = await input({ message: `${message}:`, default: defaultValue });
+const askForInput = async (data: { message: string, normalize?: boolean, defaultValue?: string, required?: boolean }) => {
+  const { message, normalize = false, required = false, defaultValue = undefined } = data
+  const answerRaw = await input({ message: `${message}:`, default: defaultValue, required });
   if (!normalize) {
     return answerRaw;
   }
@@ -49,7 +49,7 @@ const runPoetryInstall = (projectDir: string) => {
 
 async function generate() {
   
-  const projectName = await askForInput({ message: 'Project name', normalize: true });
+  const projectName = await askForInput({ message: 'Project name', normalize: true, required: true });
   const projectDescription = await askForInput({ message: 'Project description' });
   const author = await askForInput({ message: 'Author' });
   const postgresUser = await askForInput({ message: 'Postgresql useraname', defaultValue: 'root' });
@@ -121,7 +121,7 @@ build-backend = "poetry.core.masonry.api"
   checkIfPoetryExists();
 
   // Enter the project directory and run `poetry install`
-  runPoetryInstall(projectDir);
+  runPoetryInstall(serverDir);
 }
 
 generate();
