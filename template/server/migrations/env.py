@@ -2,10 +2,11 @@ from __future__ import with_statement
 from logging.config import fileConfig
 from sqlalchemy import engine_from_config, pool
 from alembic import context
-
-# Import your app and db from your package
 from server import create_app, db
 from server.models import *
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Set up the app context
 app = create_app()

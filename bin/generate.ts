@@ -95,6 +95,7 @@ sqlalchemy = "^2.0.32"
 psycopg2-binary = "^2.9.9"
 flask-sqlalchemy = "^3.1.1"
 alembic = "^1.13.2"
+python-dotenv = "^1.0.1"
 
 [build-system]
 requires = ["poetry-core"]
