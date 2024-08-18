@@ -1,10 +1,13 @@
 .PHONY: start make_migrations migrate
 
+install:
+	poetry --directory server install
+
 start:
-	poetry run python -m server.app
+	PYTHONPATH=server poetry --directory server run python -m app
 
 make_migrations:
-	poetry run alembic -c server/alembic.ini revision --autogenerate -m $(name)
+	PYTHONPATH=server poetry --directory server run alembic -c server/alembic.ini revision --autogenerate -m $(name)
 
 migrate:
-	poetry run alembic -c server/alembic.ini upgrade head
+	PYTHONPATH=server poetry --directory server run alembic -c server/alembic.ini upgrade head
