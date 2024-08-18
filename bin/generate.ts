@@ -57,12 +57,13 @@ async function generate() {
   const postgresDatabase = await askForInput({ message: 'Postgresql database name', defaultValue: 'db' });
   const dockerHubRegistryName = await askForInput({ message: 'DockerHub registry name' });
   const dockerHubLoginToken = await askForInput({ message: 'DockerHub login token' });
-
-  const projectDir = path.join(CURRENT_DIR, projectName);
-  fs.mkdirSync(projectDir);
-
+  
   const templateDir = TEMPLATE_DIR;
+  const projectDir = path.join(CURRENT_DIR, projectName);
+  const serverDir = path.join(CURRENT_DIR, projectName, 'server');
+  const clientDir = path.join(CURRENT_DIR, projectName, 'src');
 
+  fs.mkdirSync(projectDir);
   fs.copySync(templateDir, projectDir);
 
   // Define the content of the .env file
@@ -100,7 +101,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 `.trim();
 
-  const pyProjectPath = path.join(projectDir, 'pyproject.toml');
+  const pyProjectPath = path.join(serverDir, 'pyproject.toml');
   fs.writeFileSync(pyProjectPath, pyProjectContent);
 
   // Replace placeholders in files
