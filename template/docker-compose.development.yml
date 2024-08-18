@@ -23,4 +23,4 @@ services:
     volumes:
       - .:/app
     ports:
-      - "3000:5000"
+      - "5000:5000"
