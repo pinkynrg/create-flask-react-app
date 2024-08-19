@@ -77,6 +77,11 @@ build-backend = "poetry.core.masonry.api"
   fs.writeFileSync(pyProjectPath, pyProjectContent);
 };
 
+const moveFilesPreserveExisting = (sourceDir: string, destDir: string) => {
+  fs.copySync(sourceDir, destDir, { overwrite: false, errorOnExist: false });
+  fs.removeSync(sourceDir); // Optionally remove the source directory after copying
+};
+
 async function generate() {
   const projectName = await askForInput({ message: 'Project name', normalize: true, required: true });
   const projectDescription = await askForInput({ message: 'Project description' });
@@ -107,16 +112,26 @@ async function generate() {
 
   writePyProjectFile(serverDir, { name: projectName, description: projectDescription, author });
 
-  console.log(`Project ${projectName} created successfully.`);
-
+  // install poetry packages
   checkIfCommandExists('poetry');
   runCommand('poetry install', { cwd: serverDir, stdio: 'inherit' });
 
+  // install vite
   checkIfCommandExists('npm');
-  runCommand(`npm create vite@latest ${projectName} -- --template react`, { cwd: projectName, stdio: 'inherit' });
-  runCommand(`npm install`, { cwd: temporaryClientDir, stdio: 'inherit' });
-  fs.move(temporaryClientDir, clientDir);
+  runCommand(`npm create vite@latest ${projectName} -- --template react-ts`, { cwd: projectDir, stdio: 'inherit' });
+  
+  // Move files from temporaryClientDir to clientDir, preserving existing files
+  moveFilesPreserveExisting(temporaryClientDir, clientDir);
 
+  // install basic packages
+  runCommand(`npm install`, { cwd: clientDir, stdio: 'inherit' });
+
+  // add some usefull packages 
+  ['moment', 'axios'].forEach((pkg) => {
+    runCommand(`npm install ${pkg}`, { cwd: clientDir, stdio: 'inherit' });
+  });
+
+  console.log(`Project ${projectName} created successfully.`);
 }
 
 generate();

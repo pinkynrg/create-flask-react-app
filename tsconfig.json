@@ -8,6 +8,6 @@
     "rootDir": "bin",             // Root directory for TypeScript source files
     "skipLibCheck": true          // Skip type checking of declaration files
   },
-  "include": ["**/*"],
+  "include": ["bin"],
   "exclude": ["node_modules"]
 }
