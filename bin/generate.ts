@@ -170,38 +170,37 @@ async function generate(): Promise<void> {
   // Move files from temporaryClientDir to clientDir, preserving existing files
   moveFilesPreserveExisting(temporaryClientDir, clientDir);
 
-  // Install basic npm packages
+  // Load the existing package.json
+  const pkgJson = await PackageJson.load(clientDir);
+
+  // Update the package.json
+  pkgJson.update({
+    dependencies: {
+      ...(pkgJson.content.dependencies || {}),
+      'axios': '^1.7.4',
+      'moment': '^2.30.1',
+    },
+    devDependencies: {
+      ...(pkgJson.content.devDependencies || {}),
+      'eslint-plugin-prefer-arrow': '^1.2.3',
+      '@types/node': '^22.4.1',
+      'eslint': '^8.51.0',
+    },
+    scripts: {
+      ...pkgJson.content.scripts,
+      'lint': 'eslint **/*.{ts,tsx}',
+    },
+  });
+
+  pkgJson.save()
+
+  // Install npm packages
   await runCommand(`npm install`, { cwd: clientDir });
 
   // Install Airbnb ESLint config
   await runCommand('npx install-peerdeps --dev eslint-config-airbnb', { cwd: clientDir })
-
-  const packages = [
-    { name: 'axios', version: '^1.7.4', devDependency: false },
-    { name: 'moment', version: '^2.30.1', devDependency: false },
-    { name: 'eslint-plugin-prefer-arrow', version: '^1.2.3', devDependency: true },
-    { name: '@types/node', version: '^22.4.1', devDependency: true },
-  ];
-  
-  await Promise.all(
-    packages.map(async (pkg) => {
-      const command = pkg.devDependency 
-        ? `npm install ${pkg.name}@${pkg.version} --save-dev` 
-        : `npm install ${pkg.name}@${pkg.version} --save`;
-      await runCommand(command, { cwd: clientDir });
-    })
-  );
-
   await runCommand('npm uninstall @eslint/js', { cwd: clientDir })  
   await runCommand('rm eslint.config.js', { cwd: clientDir })
-  const pkgJson = await PackageJson.load(clientDir)
-  pkgJson.update({
-    scripts: {
-      ...pkgJson.content.scripts,
-      'lint': 'eslint **/*.{ts,tsx}',
-    }
-  })
-  pkgJson.save()
 
   console.log(`Project ${userInput.projectName} created successfully.`);
 }
