@@ -42,7 +42,7 @@ config:
   # Maximum delay between frames in ms
   # Ignored if the `frameDelay` isn't set to `auto`
   # Set to `auto` to prevent limiting the max idle time
-  maxIdleTime: 2000
+  maxIdleTime: 50
   
   # The surrounding frame box
   # The `type` can be null, window, floating, or solid`
@@ -111,1041 +111,577 @@ config:
   
 # Records, feel free to edit them
 records:
-  - delay: 1000
-    content: "\r\n"
-  - delay: 121
+  - delay: 1461
     content: 'n'
-  - delay: 99
+  - delay: 578
     content: p
-  - delay: 98
+  - delay: 151
     content: m
-  - delay: 132
-    content: ' '
-  - delay: 602
-    content: c
-  - delay: 198
-    content: r
-  - delay: 59
-    content: e
-  - delay: 179
-    content: a
-  - delay: 189
-    content: t
-  - delay: 65
-    content: e
-  - delay: 192
-    content: ' '
-  - delay: 175
-    content: f
-  - delay: 125
-    content: l
-  - delay: 107
-    content: a
-  - delay: 120
-    content: s
-  - delay: 112
-    content: k
-  - delay: 287
-    content: '-'
-  - delay: 150
-    content: r
-  - delay: 70
-    content: e
-  - delay: 188
-    content: a
-  - delay: 96
-    content: c
-  - delay: 185
-    content: t
-  - delay: 102
-    content: '-'
-  - delay: 127
-    content: a
-  - delay: 105
-    content: p
-  - delay: 143
-    content: p
-  - delay: 356
-    content: '@'
-  - delay: 277
-    content: l
-  - delay: 110
-    content: a
-  - delay: 173
-    content: t
-  - delay: 103
-    content: e
-  - delay: 149
-    content: s
-  - delay: 74
-    content: t
-  - delay: 168
-    content: "\r\n"
-  - delay: 986
-    content: "\e[32m?\e[39m \e[1mProject name:\e[22m\e[17G"
-  - delay: 2155
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject name:\e[22m m\e[18G"
-  - delay: 174
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject name:\e[22m my\e[19G"
-  - delay: 184
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject name:\e[22m my\e[20G"
-  - delay: 93
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject name:\e[22m my p\e[21G"
-  - delay: 109
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject name:\e[22m my pr\e[22G"
-  - delay: 80
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject name:\e[22m my pro\e[23G"
-  - delay: 175
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject name:\e[22m my proj\e[24G"
-  - delay: 73
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject name:\e[22m my proje\e[25G"
-  - delay: 175
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject name:\e[22m my projec\e[26G"
-  - delay: 180
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject name:\e[22m my project\e[27G"
-  - delay: 109
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject name:\e[22m my project\e[27G\e[2K\e[G\e[32m?\e[39m \e[1mProject name:\e[22m \e[36mmy project\e[39m\e[27G\r\n\e[?25h\e[32m?\e[39m \e[1mProject name will be my-project:\e[22m \e[2m(Y/n)\e[22m\e[42G"
-  - delay: 442
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject name will be my-project:\e[22m \e[36myes\e[39m\e[39G\r\n\e[?25h\e[32m?\e[39m \e[1mProject description:\e[22m\e[24G"
-  - delay: 1966
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject description:\e[22m a\e[25G"
-  - delay: 186
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject description:\e[22m a\e[26G"
-  - delay: 149
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject description:\e[22m a d\e[27G"
-  - delay: 146
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject description:\e[22m a de\e[28G"
-  - delay: 161
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject description:\e[22m a des\e[29G"
-  - delay: 79
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject description:\e[22m a desc\e[30G"
-  - delay: 42
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject description:\e[22m a descc\e[31G"
-  - delay: 124
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject description:\e[22m a desccr\e[32G"
-  - delay: 98
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject description:\e[22m a desccri\e[33G"
-  - delay: 62
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject description:\e[22m a desccrip\e[34G"
-  - delay: 120
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject description:\e[22m a desccript\e[35G"
-  - delay: 112
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject description:\e[22m a desccripti\e[36G"
-  - delay: 63
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject description:\e[22m a desccriptio\e[37G"
-  - delay: 166
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject description:\e[22m a desccription\e[38G"
-  - delay: 414
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject description:\e[22m a desccription\e[38G\e[2K\e[G\e[32m?\e[39m \e[1mProject description:\e[22m \e[36ma desccription\e[39m\e[38G\r\n\e[?25h\e[32m?\e[39m \e[1mAuthor:\e[22m\e[11G"
-  - delay: 1223
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mAuthor:\e[22m F\e[12G"
-  - delay: 171
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mAuthor:\e[22m Fr\e[13G"
-  - delay: 62
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mAuthor:\e[22m Fra\e[14G"
-  - delay: 123
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mAuthor:\e[22m Fran\e[15G"
-  - delay: 63
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mAuthor:\e[22m Franc\e[16G"
-  - delay: 99
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mAuthor:\e[22m France\e[17G"
-  - delay: 143
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mAuthor:\e[22m Frances\e[18G"
-  - delay: 71
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mAuthor:\e[22m Francesc\e[19G"
-  - delay: 77
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mAuthor:\e[22m Francesco\e[20G"
-  - delay: 114
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mAuthor:\e[22m Francesco\e[21G"
-  - delay: 209
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mAuthor:\e[22m Francesco M\e[22G"
-  - delay: 120
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mAuthor:\e[22m Francesco Me\e[23G"
-  - delay: 84
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mAuthor:\e[22m Francesco Mel\e[24G"
-  - delay: 90
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mAuthor:\e[22m Francesco Meli\e[25G"
-  - delay: 186
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mAuthor:\e[22m Francesco Meli\e[25G\e[2K\e[G\e[32m?\e[39m \e[1mAuthor:\e[22m \e[36mFrancesco Meli\e[39m\e[25G\r\n\e[?25h\e[32m?\e[39m \e[1mPostgresql username:\e[22m \e[2m(root)\e[22m\e[31G"
-  - delay: 2488
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mPostgresql username:\e[22m \e[2m(root)\e[22m\e[31G\e[2K\e[G\e[32m?\e[39m \e[1mPostgresql username:\e[22m root\e[28G\e[2K\e[G\e[32m?\e[39m \e[1mPostgresql username:\e[22m \e[36mroot\e[39m\e[28G\r\n\e[?25h\e[32m?\e[39m \e[1mPostgresql password:\e[22m \e[2m(root)\e[22m\e[31G"
-  - delay: 468
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mPostgresql password:\e[22m \e[2m(root)\e[22m\e[31G\e[2K\e[G\e[32m?\e[39m \e[1mPostgresql password:\e[22m root\e[28G\e[2K\e[G\e[32m?\e[39m \e[1mPostgresql password:\e[22m \e[36mroot\e[39m\e[28G\r\n\e[?25h\e[32m?\e[39m \e[1mPostgresql database name:\e[22m \e[2m(db)\e[22m\e[34G"
-  - delay: 452
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mPostgresql database name:\e[22m \e[2m(db)\e[22m\e[34G\e[2K\e[G\e[32m?\e[39m \e[1mPostgresql database name:\e[22m db\e[31G\e[2K\e[G\e[32m?\e[39m \e[1mPostgresql database name:\e[22m \e[36mdb\e[39m\e[31G\r\n\e[?25h\e[32m?\e[39m \e[1mDockerHub registry name:\e[22m\e[28G"
-  - delay: 492
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mDockerHub registry name:\e[22m\e[28G\e[2K\e[G\e[32m?\e[39m \e[1mDockerHub registry name:\e[22m \e[36m\e[39m\e[28G\r\n\e[?25h\e[32m?\e[39m \e[1mDockerHub login token:\e[22m\e[26G"
-  - delay: 451
-    content: "\e[2K\e[G\e[32m?\e[39m \e[1mDockerHub login token:\e[22m\e[26G\e[2K\e[G\e[32m?\e[39m \e[1mDockerHub login token:\e[22m \e[36m\e[39m\e[26G\r\n\e[?25h"
-  - delay: 2694
-    content: "poetry is installed.\r\n"
-  - delay: 766
-    content: "Creating virtualenv \e[36mmy-project-wL_ByBM--py3.12\e[39m in /Users/francescomeli/Library/Caches/pypoetry/virtualenvs\r\n"
-  - delay: 3453
-    content: "\e[34mUpdating dependencies\e[39m\r\n\r\e[2K\e[34mResolving dependencies...\e[39m \e[39;2m(0.0s)\e[39;22m"
-  - delay: 105
-    content: "\r\e[2K\e[34mResolving dependencies...\e[39m \e[39;2m(0.1s)\e[39;22m"
-  - delay: 106
-    content: "\r\e[2K\e[34mResolving dependencies...\e[39m \e[39;2m(0.2s)\e[39;22m"
-  - delay: 104
-    content: "\r\e[2K\e[34mResolving dependencies...\e[39m \e[39;2m(0.3s)\e[39;22m"
-  - delay: 105
-    content: "\r\e[2K\e[34mResolving dependencies...\e[39m \e[39;2m(0.4s)\e[39;22m"
-  - delay: 104
-    content: "\r\e[2K\e[34mResolving dependencies...\e[39m \e[39;2m(0.5s)\e[39;22m"
-  - delay: 103
-    content: "\r\e[2K\e[34mResolving dependencies...\e[39m \e[39;2m(0.6s)\e[39;22m"
-  - delay: 109
-    content: "\r\e[2K\e[34mResolving dependencies...\e[39m \e[39;2m(0.7s)\e[39;22m"
-  - delay: 111
-    content: "\r\e[2K"
-  - delay: 7
-    content: "\e[34mResolving dependencies...\e[39m \e[39;2m(0.8s)\e[39;22m"
-  - delay: 111
-    content: "\r\e[2K\e[34mResolving dependencies...\e[39m \e[39;2m(1.0s)\e[39;22m"
-  - delay: 100
-    content: "\r\e[2K\e[34mResolving dependencies...\e[39m \e[39;2m(1.1s)\e[39;22m"
-  - delay: 102
-    content: "\r\e[2K\e[34mResolving dependencies...\e[39m \e[39;2m(1.2s)\e[39;22m"
-  - delay: 105
-    content: "\r\e[2K\e[34mResolving dependencies...\e[39m \e[39;2m(1.3s)\e[39;22m"
-  - delay: 105
-    content: "\r\e[2K\e[34mResolving dependencies...\e[39m \e[39;2m(1.4s)\e[39;22m"
-  - delay: 105
-    content: "\r\e[2K\e[34mResolving dependencies...\e[39m \e[39;2m(1.5s)\e[39;22m"
-  - delay: 101
-    content: "\r\e[2K\e[34mResolving dependencies...\e[39m \e[39;2m(1.6s)\e[39;22m"
-  - delay: 107
-    content: "\r\e[2K"
-  - delay: 6
-    content: "\e[34mResolving dependencies...\e[39m \e[39;2m(1.7s)\e[39;22m"
-  - delay: 110
-    content: "\r\e[2K\e[34mResolving dependencies...\e[39m \e[39;2m(1.8s)\e[39;22m"
-  - delay: 105
-    content: "\r\e[2K\e[34mResolving dependencies...\e[39m \e[39;2m(1.9s)\e[39;22m\r\n"
-  - delay: 6
-    content: "\r\n\e[39;1mPackage operations\e[39;22m: \e[34m14\e[39m installs, \e[34m0\e[39m updates, \e[34m0\e[39m removals\r\n\r\n"
-  - delay: 27
-    content: "  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mmarkupsafe\e[39m\e[39m (\e[39m\e[39;1m2.1.5\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n"
-  - delay: 148
-    content: "\e[1A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mmarkupsafe\e[39m\e[39m (\e[39m\e[39;1m2.1.5\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n"
-  - delay: 8
-    content: "\e[1A\e[0J  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mmarkupsafe\e[39m\e[39m (\e[39m\e[32m2.1.5\e[39m\e[39m)\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mblinker\e[39m\e[39m (\e[39m\e[39;1m1.8.2\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mclick\e[39m\e[39m (\e[39m\e[39;1m8.1.7\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mitsdangerous\e[39m\e[39m (\e[39m\e[39;1m2.2.0\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mjinja2\e[39m\e[39m (\e[39m\e[39;1m3.1.4\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mtyping-extensions\e[39m\e[39m (\e[39m\e[39;1m4.12.2\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mwerkzeug\e[39m\e[39m (\e[39m\e[39;1m3.0.3\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n"
-  - delay: 91
-    content: "\e[6A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mclick\e[39m\e[39m (\e[39m\e[39;1m8.1.7\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mitsdangerous\e[39m\e[39m (\e[39m\e[39;1m2.2.0\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mjinja2\e[39m\e[39m (\e[39m\e[39;1m3.1.4\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mtyping-extensions\e[39m\e[39m (\e[39m\e[39;1m4.12.2\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mwerkzeug\e[39m\e[39m (\e[39m\e[39;1m3.0.3\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n\e[5A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mblinker\e[39m\e[39m (\e[39m\e[39;1m1.8.2\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mclick\e[39m\e[39m (\e[39m\e[39;1m8.1.7\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mitsdangerous\e[39m\e[39m (\e[39m\e[39;1m2.2.0\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mjinja2\e[39m\e[39m (\e[39m\e[39;1m3.1.4\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mtyping-extensions\e[39m\e[39m (\e[39m\e[39;1m4.12.2\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mwerkzeug\e[39m\e[39m (\e[39m\e[39;1m3.0.3\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n\e[6A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mclick\e[39m\e[39m (\e[39m\e[39;1m8.1.7\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mitsdangerous\e[39m\e[39m (\e[39m\e[39;1m2.2.0\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mjinja2\e[39m\e[39m (\e[39m\e[39;1m3.1.4\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mtyping-extensions\e[39m\e[39m (\e[39m\e[39;1m4.12.2\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mwerkzeug\e[39m\e[39m (\e[39m\e[39;1m3.0.3\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n\e[5A\e[0J  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mblinker\e[39m\e[39m (\e[39m\e[32m1.8.2\e[39m\e[39m)\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mclick\e[39m\e[39m (\e[39m\e[39;1m8.1.7\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mitsdangerous\e[39m\e[39m (\e[39m\e[39;1m2.2.0\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mjinja2\e[39m\e[39m (\e[39m\e[39;1m3.1.4\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mtyping-extensions\e[39m\e[39m (\e[39m\e[39;1m4.12.2\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mwerkzeug\e[39m\e[39m (\e[39m\e[39;1m3.0.3\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n"
-  - delay: 120
-    content: "\e[3A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mtyping-extensions\e[39m\e[39m (\e[39m\e[39;1m4.12.2\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mwerkzeug\e[39m\e[39m (\e[39m\e[39;1m3.0.3\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n\e[2A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mjinja2\e[39m\e[39m (\e[39m\e[39;1m3.1.4\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mtyping-extensions\e[39m\e[39m (\e[39m\e[39;1m4.12.2\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mwerkzeug\e[39m\e[39m (\e[39m\e[39;1m3.0.3\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n"
-  - delay: 16
-    content: "\e[4A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mjinja2\e[39m\e[39m (\e[39m\e[39;1m3.1.4\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mtyping-extensions\e[39m\e[39m (\e[39m\e[39;1m4.12.2\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mwerkzeug\e[39m\e[39m (\e[39m\e[39;1m3.0.3\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n\e[3A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mitsdangerous\e[39m\e[39m (\e[39m\e[39;1m2.2.0\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mjinja2\e[39m\e[39m (\e[39m\e[39;1m3.1.4\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mtyping-extensions\e[39m\e[39m (\e[39m\e[39;1m4.12.2\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mwerkzeug\e[39m\e[39m (\e[39m\e[39;1m3.0.3\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n"
-  - delay: 6
-    content: "\e[5A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mitsdangerous\e[39m\e[39m (\e[39m\e[39;1m2.2.0\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mjinja2\e[39m\e[39m (\e[39m\e[39;1m3.1.4\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mtyping-extensions\e[39m\e[39m (\e[39m\e[39;1m4.12.2\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mwerkzeug\e[39m\e[39m (\e[39m\e[39;1m3.0.3\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n\e[4A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mclick\e[39m\e[39m (\e[39m\e[39;1m8.1.7\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mitsdangerous\e[39m\e[39m (\e[39m\e[39;1m2.2.0\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mjinja2\e[39m\e[39m (\e[39m\e[39;1m3.1.4\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mtyping-extensions\e[39m\e[39m (\e[39m\e[39;1m4.12.2\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mwerkzeug\e[39m\e[39m (\e[39m\e[39;1m3.0.3\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n\e[1A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mwerkzeug\e[39m\e[39m (\e[39m\e[39;1m3.0.3\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n\e[2A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mwerkzeug\e[39m\e[39m (\e[39m\e[39;1m3.0.3\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n\e[1A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mtyping-extensions\e[39m\e[39m (\e[39m\e[39;1m4.12.2\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mwerkzeug\e[39m\e[39m (\e[39m\e[39;1m3.0.3\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n"
-  - delay: 26
-    content: "\e[2A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mwerkzeug\e[39m\e[39m (\e[39m\e[39;1m3.0.3\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n\e[1A\e[0J  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mtyping-extensions\e[39m\e[39m (\e[39m\e[32m4.12.2\e[39m\e[39m)\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mwerkzeug\e[39m\e[39m (\e[39m\e[39;1m3.0.3\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n\e[4A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mjinja2\e[39m\e[39m (\e[39m\e[39;1m3.1.4\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mtyping-extensions\e[39m\e[39m (\e[39m\e[32m4.12.2\e[39m\e[39m)\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mwerkzeug\e[39m\e[39m (\e[39m\e[39;1m3.0.3\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n\e[3A\e[0J  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mitsdangerous\e[39m\e[39m (\e[39m\e[32m2.2.0\e[39m\e[39m)\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mjinja2\e[39m\e[39m (\e[39m\e[39;1m3.1.4\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mtyping-extensions\e[39m\e[39m (\e[39m\e[32m4.12.2\e[39m\e[39m)\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mwerkzeug\e[39m\e[39m (\e[39m\e[39;1m3.0.3\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n"
-  - delay: 6
-    content: "\e[3A\e[0J  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mtyping-extensions\e[39m\e[39m (\e[39m\e[32m4.12.2\e[39m\e[39m)\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mwerkzeug\e[39m\e[39m (\e[39m\e[39;1m3.0.3\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n\e[2A\e[0J  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mjinja2\e[39m\e[39m (\e[39m\e[32m3.1.4\e[39m\e[39m)\e[39m\r\n  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mtyping-extensions\e[39m\e[39m (\e[39m\e[32m4.12.2\e[39m\e[39m)\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mwerkzeug\e[39m\e[39m (\e[39m\e[39;1m3.0.3\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n\e[5A\e[0J  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mitsdangerous\e[39m\e[39m (\e[39m\e[32m2.2.0\e[39m\e[39m)\e[39m\r\n  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mjinja2\e[39m\e[39m (\e[39m\e[32m3.1.4\e[39m\e[39m)\e[39m\r\n  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mtyping-extensions\e[39m\e[39m (\e[39m\e[32m4.12.2\e[39m\e[39m)\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mwerkzeug\e[39m\e[39m (\e[39m\e[39;1m3.0.3\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n\e[4A\e[0J  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mclick\e[39m\e[39m (\e[39m\e[32m8.1.7\e[39m\e[39m)\e[39m\r\n  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mitsdangerous\e[39m\e[39m (\e[39m\e[32m2.2.0\e[39m\e[39m)\e[39m\r\n  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mjinja2\e[39m\e[39m (\e[39m\e[32m3.1.4\e[39m\e[39m)\e[39m\r\n  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mtyping-extensions\e[39m\e[39m (\e[39m\e[32m4.12.2\e[39m\e[39m)\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mwerkzeug\e[39m\e[39m (\e[39m\e[39;1m3.0.3\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n"
-  - delay: 13
-    content: "\e[1A\e[0J  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mwerkzeug\e[39m\e[39m (\e[39m\e[32m3.0.3\e[39m\e[39m)\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mflask\e[39m\e[39m (\e[39m\e[39;1m3.0.3\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mmako\e[39m\e[39m (\e[39m\e[39;1m1.3.5\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36msqlalchemy\e[39m\e[39m (\e[39m\e[39;1m2.0.32\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n"
-  - delay: 90
-    content: "\e[3A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mmako\e[39m\e[39m (\e[39m\e[39;1m1.3.5\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36msqlalchemy\e[39m\e[39m (\e[39m\e[39;1m2.0.32\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n\e[2A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mflask\e[39m\e[39m (\e[39m\e[39;1m3.0.3\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mmako\e[39m\e[39m (\e[39m\e[39;1m1.3.5\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36msqlalchemy\e[39m\e[39m (\e[39m\e[39;1m2.0.32\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n"
-  - delay: 5
-    content: "\e[1A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36msqlalchemy\e[39m\e[39m (\e[39m\e[39;1m2.0.32\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n"
-  - delay: 18
-    content: "\e[3A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mmako\e[39m\e[39m (\e[39m\e[39;1m1.3.5\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36msqlalchemy\e[39m\e[39m (\e[39m\e[39;1m2.0.32\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n\e[2A\e[0J  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mflask\e[39m\e[39m (\e[39m\e[32m3.0.3\e[39m\e[39m)\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mmako\e[39m\e[39m (\e[39m\e[39;1m1.3.5\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36msqlalchemy\e[39m\e[39m (\e[39m\e[39;1m2.0.32\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n"
-  - delay: 34
-    content: "\e[2A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36msqlalchemy\e[39m\e[39m (\e[39m\e[39;1m2.0.32\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n\e[1A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mmako\e[39m\e[39m (\e[39m\e[39;1m1.3.5\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36msqlalchemy\e[39m\e[39m (\e[39m\e[39;1m2.0.32\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n"
-  - delay: 17
-    content: "\e[2A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36msqlalchemy\e[39m\e[39m (\e[39m\e[39;1m2.0.32\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n\e[1A\e[0J  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mmako\e[39m\e[39m (\e[39m\e[32m1.3.5\e[39m\e[39m)\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36msqlalchemy\e[39m\e[39m (\e[39m\e[39;1m2.0.32\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n"
-  - delay: 40
-    content: "\e[1A\e[0J  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36msqlalchemy\e[39m\e[39m (\e[39m\e[32m2.0.32\e[39m\e[39m)\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36malembic\e[39m\e[39m (\e[39m\e[39;1m1.13.2\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mflask-sqlalchemy\e[39m\e[39m (\e[39m\e[39;1m3.1.1\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpsycopg2-binary\e[39m\e[39m (\e[39m\e[39;1m2.9.9\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpython-dotenv\e[39m\e[39m (\e[39m\e[39;1m1.0.1\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n"
-  - delay: 66
-    content: "\e[1A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpython-dotenv\e[39m\e[39m (\e[39m\e[39;1m1.0.1\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n"
-  - delay: 7
-    content: "\e[4A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mflask-sqlalchemy\e[39m\e[39m (\e[39m\e[39;1m3.1.1\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpsycopg2-binary\e[39m\e[39m (\e[39m\e[39;1m2.9.9\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpython-dotenv\e[39m\e[39m (\e[39m\e[39;1m1.0.1\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n\e[3A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36malembic\e[39m\e[39m (\e[39m\e[39;1m1.13.2\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mflask-sqlalchemy\e[39m\e[39m (\e[39m\e[39;1m3.1.1\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpsycopg2-binary\e[39m\e[39m (\e[39m\e[39;1m2.9.9\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpython-dotenv\e[39m\e[39m (\e[39m\e[39;1m1.0.1\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n\e[1A\e[0J  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpython-dotenv\e[39m\e[39m (\e[39m\e[32m1.0.1\e[39m\e[39m)\e[39m\r\n\e[2A\e[0J  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpython-dotenv\e[39m\e[39m (\e[39m\e[32m1.0.1\e[39m\e[39m)\e[39m\r\n\e[1A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpsycopg2-binary\e[39m\e[39m (\e[39m\e[39;1m2.9.9\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpython-dotenv\e[39m\e[39m (\e[39m\e[32m1.0.1\e[39m\e[39m)\e[39m\r\n"
-  - delay: 32
-    content: "\e[4A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mflask-sqlalchemy\e[39m\e[39m (\e[39m\e[39;1m3.1.1\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpsycopg2-binary\e[39m\e[39m (\e[39m\e[39;1m2.9.9\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpython-dotenv\e[39m\e[39m (\e[39m\e[32m1.0.1\e[39m\e[39m)\e[39m\r\n\e[3A\e[0J  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36malembic\e[39m\e[39m (\e[39m\e[32m1.13.2\e[39m\e[39m)\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mflask-sqlalchemy\e[39m\e[39m (\e[39m\e[39;1m3.1.1\e[39;22m\e[39m)\e[39m: \e[34mPending...\e[39m\r\n  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpsycopg2-binary\e[39m\e[39m (\e[39m\e[39;1m2.9.9\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpython-dotenv\e[39m\e[39m (\e[39m\e[32m1.0.1\e[39m\e[39m)\e[39m\r\n\e[2A\e[0J  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpython-dotenv\e[39m\e[39m (\e[39m\e[32m1.0.1\e[39m\e[39m)\e[39m\r\n\e[1A\e[0J  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpsycopg2-binary\e[39m\e[39m (\e[39m\e[32m2.9.9\e[39m\e[39m)\e[39m\r\n  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpython-dotenv\e[39m\e[39m (\e[39m\e[32m1.0.1\e[39m\e[39m)\e[39m\r\n"
-  - delay: 67
-    content: "\e[3A\e[0J  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpsycopg2-binary\e[39m\e[39m (\e[39m\e[32m2.9.9\e[39m\e[39m)\e[39m\r\n  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpython-dotenv\e[39m\e[39m (\e[39m\e[32m1.0.1\e[39m\e[39m)\e[39m\r\n\e[2A\e[0J  \e[34;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mflask-sqlalchemy\e[39m\e[39m (\e[39m\e[39;1m3.1.1\e[39;22m\e[39m)\e[39m: \e[34mInstalling...\e[39m\r\n  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpsycopg2-binary\e[39m\e[39m (\e[39m\e[32m2.9.9\e[39m\e[39m)\e[39m\r\n  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpython-dotenv\e[39m\e[39m (\e[39m\e[32m1.0.1\e[39m\e[39m)\e[39m\r\n"
-  - delay: 5
-    content: "\e[3A\e[0J  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpsycopg2-binary\e[39m\e[39m (\e[39m\e[32m2.9.9\e[39m\e[39m)\e[39m\r\n  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpython-dotenv\e[39m\e[39m (\e[39m\e[32m1.0.1\e[39m\e[39m)\e[39m\r\n\e[2A\e[0J  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mflask-sqlalchemy\e[39m\e[39m (\e[39m\e[32m3.1.1\e[39m\e[39m)\e[39m\r\n  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpsycopg2-binary\e[39m\e[39m (\e[39m\e[32m2.9.9\e[39m\e[39m)\e[39m\r\n  \e[32;1m-\e[39;22m \e[39mInstalling \e[39m\e[36mpython-dotenv\e[39m\e[39m (\e[39m\e[32m1.0.1\e[39m\e[39m)\e[39m\r\n"
-  - delay: 20
-    content: "\r\n\e[34mWriting lock file\e[39m\r\n"
-  - delay: 374
-    content: "npm is installed.\r\n"
-  - delay: 993
-    content: "\r\nScaffolding project in /Users/francescomeli/Projects/create-flask-react-app/my-project/my-project...\r\n"
-  - delay: 62
-    content: "\r\nDone. Now run:\r\n\r\n  cd my-project\r\n  npm install\r\n  npm run dev\r\n\r\n"
-  - delay: 443
-    content: "\e[?25l(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 63
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 67
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 53
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠴ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠴ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠴ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠴ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠴ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 48
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠴ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠴ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 54
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠴ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠴ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠴ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 56
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 57
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠼ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠼ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 79
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠼ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠼ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠴ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠴ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠴ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 58
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠋ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠋ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠋ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠋ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠋ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠋ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠋ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠋ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠋ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠋ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 48
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠋ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠋ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 59
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠴ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 5932ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠴ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 5932ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠴ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 5932ms\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 5932ms\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠋ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 5932ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠹ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 5932ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 5932ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 5932ms\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 5932ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 5932ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 5932ms\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 5932ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠼ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 5932ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠼ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 5932ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠼ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 5932ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 5932ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 5932ms\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 5932ms\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 5932ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 5932ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 5932ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:eslint: \e[7msill\e[0m \e[35mplaceDep\e[0m ROOT chalk@2.4.2 OK for: @babel/highlight@7.24.7 want: ^2.4.2\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:eslint: \e[7msill\e[0m \e[35mplaceDep\e[0m ROOT chalk@2.4.2 OK for: @babel/highlight@7.24.7 want: ^2.4.2\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:eslint: \e[7msill\e[0m \e[35mplaceDep\e[0m ROOT chalk@2.4.2 OK for: @babel/highlight@7.24.7 want: ^2.4.2\e[0m\e[K\r"
-  - delay: 57
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ idealTree:eslint: \e[7msill\e[0m \e[35mplaceDep\e[0m ROOT chalk@2.4.2 OK for: @babel/highlight@7.24.7 want: ^2.4.2\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ idealTree:eslint: \e[7msill\e[0m \e[35mplaceDep\e[0m ROOT chalk@2.4.2 OK for: @babel/highlight@7.24.7 want: ^2.4.2\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ idealTree:eslint: \e[7msill\e[0m \e[35mplaceDep\e[0m ROOT chalk@2.4.2 OK for: @babel/highlight@7.24.7 want: ^2.4.2\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:eslint: \e[7msill\e[0m \e[35mplaceDep\e[0m ROOT chalk@2.4.2 OK for: @babel/highlight@7.24.7 want: ^2.4.2\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:eslint: \e[7msill\e[0m \e[35mplaceDep\e[0m ROOT chalk@2.4.2 OK for: @babel/highlight@7.24.7 want: ^2.4.2\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:eslint: \e[7msill\e[0m \e[35mplaceDep\e[0m ROOT chalk@2.4.2 OK for: @babel/highlight@7.24.7 want: ^2.4.2\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠹ idealTree:eslint: \e[7msill\e[0m \e[35mplaceDep\e[0m ROOT chalk@2.4.2 OK for: @babel/highlight@7.24.7 want: ^2.4.2\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠹ idealTree:eslint: \e[7msill\e[0m \e[35mplaceDep\e[0m ROOT chalk@2.4.2 OK for: @babel/highlight@7.24.7 want: ^2.4.2\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:eslint: \e[7msill\e[0m \e[35mplaceDep\e[0m ROOT chalk@2.4.2 OK for: @babel/highlight@7.24.7 want: ^2.4.2\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:eslint: \e[7msill\e[0m \e[35mplaceDep\e[0m ROOT chalk@2.4.2 OK for: @babel/highlight@7.24.7 want: ^2.4.2\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:eslint: \e[7msill\e[0m \e[35mplaceDep\e[0m ROOT chalk@2.4.2 OK for: @babel/highlight@7.24.7 want: ^2.4.2\e[0m\e[K\r"
-  - delay: 57
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:@eslint-community/eslint-utils: \e[7msill\e[0m \e[35mplaceDep\e[0m ROOT eslint-visitor-keys@4.0.0 OK for: eslint@9.9.0 want: ^4.0.0\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:@eslint-community/eslint-utils: \e[7msill\e[0m \e[35mplaceDep\e[0m ROOT eslint-visitor-keys@4.0.0 OK for: eslint@9.9.0 want: ^4.0.0\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:@eslint-community/eslint-utils: \e[7msill\e[0m \e[35mplaceDep\e[0m ROOT eslint-visitor-keys@4.0.0 OK for: eslint@9.9.0 want: ^4.0.0\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:@eslint-community/eslint-utils: \e[7msill\e[0m \e[35mplaceDep\e[0m ROOT eslint-visitor-keys@4.0.0 OK for: eslint@9.9.0 want: ^4.0.0\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠴ idealTree:@eslint-community/eslint-utils: \e[7msill\e[0m \e[35mplaceDep\e[0m ROOT eslint-visitor-keys@4.0.0 OK for: eslint@9.9.0 want: ^4.0.0\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠋ idealTree:@eslint-community/eslint-utils: \e[7msill\e[0m \e[35mplaceDep\e[0m ROOT eslint-visitor-keys@4.0.0 OK for: eslint@9.9.0 want: ^4.0.0\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠹ idealTree:@eslint-community/eslint-utils: \e[7msill\e[0m \e[35mplaceDep\e[0m ROOT eslint-visitor-keys@4.0.0 OK for: eslint@9.9.0 want: ^4.0.0\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠋ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠋ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠋ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠹ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 53
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠼ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠼ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠹ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠹ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠋ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠋ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 60
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 48
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 53
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 53
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 48
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 65
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠋ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 81
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠹ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠹ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠹ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 92
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 56
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠋ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠙ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠴ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠴ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 63
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠦ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠏ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠋ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠼ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠼ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 48
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠼ idealTree:@eslint-community/eslint-utils: \e[32;40mtiming\e[0m \e[35midealTree:node_modules/@eslint-community/eslint-utils\e[0m Completed in 1ms\e[0m\e[K\r"
-  - delay: 69
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠼ idealTree: \e[32;40mtiming\e[0m \e[35midealTree\e[0m Completed in 13288ms\e[0m\e[K\r"
-  - delay: 55
-    content: "(\e[107;97m##########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ reify:@esbuild/aix-ppc64: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@esbuild/android-arm\e[0m Completed in 20ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m##########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ reify:@esbuild/aix-ppc64: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@esbuild/android-arm\e[0m Completed in 20ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m##########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ reify:@esbuild/aix-ppc64: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@esbuild/android-arm\e[0m Completed in 20ms\e[0m\e[K\r"
-  - delay: 66
-    content: "(\e[107;97m##########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ reify:@esbuild/aix-ppc64: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@esbuild/android-arm\e[0m Completed in 20ms\e[0m\e[K\r"
-  - delay: 201
-    content: "(\e[107;97m##########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ reify:@esbuild/aix-ppc64: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@esbuild/android-arm\e[0m Completed in 20ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m##########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ reify:@esbuild/aix-ppc64: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@esbuild/android-arm\e[0m Completed in 20ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m##########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ reify:@esbuild/aix-ppc64: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@esbuild/android-arm\e[0m Completed in 20ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m##########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ reify:@esbuild/aix-ppc64: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@esbuild/android-arm\e[0m Completed in 20ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m###########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ reify:parent-module: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/is-extglob\e[0m Completed in 585ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m############\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂\e[0m) ⠼ reify:supports-color: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/eslint/node_modules/has-flag\e[0m Completed in 632ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m##############\e[0m\e[100;90m⠂⠂⠂⠂\e[0m) ⠋ reify:estraverse: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/flat-cache\e[0m Completed in 687ms\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[107;97m###############\e[0m\e[100;90m⠂⠂⠂\e[0m) ⠙ reify:react-refresh: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@babel/helper-validator-identifier\e[0m Completed in 729ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m################\e[0m\e[100;90m⠂⠂\e[0m) ⠸ reify:source-map-js: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/eslint-scope\e[0m Completed in 779ms\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[107;97m#################\e[0m\e[100;90m⠂\e[0m) ⠇ reify:ts-api-utils: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@types/react\e[0m Completed in 816ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m#################\e[0m\e[100;90m⠂\e[0m) ⠙ reify:@typescript-eslint/type-utils: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@babel/generator\e[0m Completed in 872ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#################\e[0m\e[100;90m⠂\e[0m) ⠼ reify:@rollup/rollup-darwin-arm64: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@babel/traverse\e[0m Completed in 911ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#################\e[0m\e[100;90m⠂\e[0m) ⠼ reify:@rollup/rollup-darwin-arm64: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@babel/traverse\e[0m Completed in 911ms\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[107;97m#################\e[0m\e[100;90m⠂\e[0m) ⠼ reify:@rollup/rollup-darwin-arm64: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@babel/traverse\e[0m Completed in 911ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m##################\e[0m) ⠧ reify:@typescript-eslint/utils: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/ajv\e[0m Completed in 1048ms\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[107;97m##################\e[0m) ⠋ reify:vite: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@babel/core\e[0m Completed in 1119ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m##################\e[0m) ⠋ reify:vite: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@babel/core\e[0m Completed in 1119ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m##################\e[0m) ⠹ reify:react-dom: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@babel/helpers\e[0m Completed in 1187ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m##################\e[0m) ⠹ reify:react-dom: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@babel/helpers\e[0m Completed in 1187ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m##################\e[0m) ⠸ reify:@babel/types: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/react-dom\e[0m Completed in 1195ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m##################\e[0m) ⠼ reify:@esbuild/darwin-arm64: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@babel/types\e[0m Completed in 1324ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m##################\e[0m) ⠴ reify:@typescript-eslint/scope-manager: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@esbuild/darwin-arm64\e[0m Completed in 1386ms\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[107;97m##################\e[0m) ⠦ reify:eslint: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@typescript-eslint/scope-manager\e[0m Completed in 1404ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m##################\e[0m) ⠧ reify:@typescript-eslint/eslint-plugin: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/eslint\e[0m Completed in 1468ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m##################\e[0m) ⠧ reify:@typescript-eslint/eslint-plugin: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/eslint\e[0m Completed in 1468ms\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[107;97m##################\e[0m) ⠹ reify:typescript: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/caniuse-lite\e[0m Completed in 1611ms\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[107;97m##################\e[0m) ⠙ reify:typescript: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/caniuse-lite\e[0m Completed in 1611ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m##################\e[0m) ⠙ reify:typescript: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/caniuse-lite\e[0m Completed in 1611ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m##################\e[0m) ⠙ reify:typescript: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/caniuse-lite\e[0m Completed in 1611ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m##################\e[0m) ⠙ reify:typescript: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/caniuse-lite\e[0m Completed in 1611ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m##################\e[0m) ⠙ reify:typescript: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/caniuse-lite\e[0m Completed in 1611ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m##################\e[0m) ⠙ reify:typescript: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/caniuse-lite\e[0m Completed in 1611ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m##################\e[0m) ⠙ reify:typescript: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/caniuse-lite\e[0m Completed in 1611ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m##################\e[0m) ⠙ reify:typescript: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/caniuse-lite\e[0m Completed in 1611ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m##################\e[0m) ⠙ reify:typescript: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/caniuse-lite\e[0m Completed in 1611ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m##################\e[0m) ⠙ reify:typescript: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/caniuse-lite\e[0m Completed in 1611ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m##################\e[0m) ⠙ reify:typescript: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/caniuse-lite\e[0m Completed in 1611ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m##################\e[0m) ⠙ reify:typescript: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/caniuse-lite\e[0m Completed in 1611ms\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[107;97m##################\e[0m) ⠙ reify:typescript: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/caniuse-lite\e[0m Completed in 1611ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m##################\e[0m) ⠙ reify:typescript: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/caniuse-lite\e[0m Completed in 1611ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m##################\e[0m) ⠙ reify:typescript: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/caniuse-lite\e[0m Completed in 1611ms\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[107;97m##################\e[0m) ⠙ reify:typescript: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/caniuse-lite\e[0m Completed in 1611ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m##################\e[0m) ⠙ reify:typescript: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/caniuse-lite\e[0m Completed in 1611ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m##################\e[0m) ⠙ reify:typescript: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/caniuse-lite\e[0m Completed in 1611ms\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[107;97m##################\e[0m) ⠙ reify:typescript: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/caniuse-lite\e[0m Completed in 1611ms\e[0m\e[K\r"
-  - delay: 79
-    content: "(\e[107;97m##################\e[0m) ⠇ reify:typescript: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/caniuse-lite\e[0m Completed in 1611ms\e[0m\e[K\r"
-  - delay: 16
-    content: "\r\e[K\e[?25h"
-  - delay: 5
-    content: "\r\nadded 196 packages, and audited 197 packages in 16s\r\n\r\n42 packages are looking for funding\r\n  run `npm fund` for details\r\n\r\nfound \e[32m\e[1m0\e[22m\e[39m vulnerabilities\r\n"
-  - delay: 506
-    content: "\e[?25l(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠼ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 48
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 64
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠇ idealTree: \e[32;40mtiming\e[0m \e[35midealTree\e[0m Completed in 466ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m##################\e[0m) ⠹ reify:@esbuild/aix-ppc64: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@esbuild/android-arm\e[0m Completed in 5ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m##################\e[0m) ⠹ reify:@esbuild/aix-ppc64: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@esbuild/android-arm\e[0m Completed in 5ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m##################\e[0m) ⠹ reify:@esbuild/aix-ppc64: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@esbuild/android-arm\e[0m Completed in 5ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m##################\e[0m) ⠹ reify:@esbuild/aix-ppc64: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@esbuild/android-arm\e[0m Completed in 5ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m##################\e[0m) ⠹ reify:@esbuild/aix-ppc64: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@esbuild/android-arm\e[0m Completed in 5ms\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[107;97m##################\e[0m) ⠧ reify:@esbuild/aix-ppc64: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@esbuild/android-arm\e[0m Completed in 5ms\e[0m\e[K\r"
-  - delay: 92
-    content: "(\e[107;97m##################\e[0m) ⠴ reify:moment: \e[32;40mtiming\e[0m \e[35mreify:audit\e[0m Completed in 276ms\e[0m\e[K\r"
-  - delay: 24
-    content: "\r\e[K\e[?25h\r\nadded 1 package, and audited 198 packages in 1s\r\n\r\n42 packages are looking for funding\r\n  run `npm fund` for details\r\n\r\nfound \e[32m\e[1m0\e[22m\e[39m vulnerabilities\r\n"
-  - delay: 472
-    content: "\e[?25l(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠼ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠧ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 60
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠹ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠹ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠹ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 51
-    content: "(\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠸ idealTree:client: \e[7msill\e[0m \e[35midealTree\e[0m buildDeps\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠹ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 724ms\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠹ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 724ms\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠹ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 724ms\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠹ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 724ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠹ idealTree:client: \e[32;40mtiming\e[0m \e[35midealTree:#root\e[0m Completed in 724ms\e[0m\e[K\r"
-  - delay: 57
-    content: "(\e[107;97m#########\e[0m\e[100;90m⠂⠂⠂⠂⠂⠂⠂⠂⠂\e[0m) ⠋ idealTree: \e[32;40mtiming\e[0m \e[35midealTree\e[0m Completed in 1042ms\e[0m\e[K\r"
-  - delay: 49
-    content: "(\e[107;97m################\e[0m\e[100;90m⠂⠂\e[0m) ⠼ reify:@esbuild/aix-ppc64: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/@esbuild/android-arm\e[0m Completed in 7ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m##################\e[0m) ⠹ reify:asynckit: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/mime-db\e[0m Completed in 57ms\e[0m\e[K\r"
-  - delay: 50
-    content: "(\e[107;97m##################\e[0m) ⠏ reify:axios: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/asynckit\e[0m Completed in 59ms\e[0m\e[K\r"
-  - delay: 57
-    content: "(\e[107;97m##################\e[0m) ⠙ reify:axios: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/asynckit\e[0m Completed in 59ms\e[0m\e[K\r"
-  - delay: 52
-    content: "(\e[107;97m##################\e[0m) ⠙ reify:axios: \e[32;40mtiming\e[0m \e[35mreifyNode:node_modules/asynckit\e[0m Completed in 59ms\e[0m\e[K\r"
-  - delay: 22
-    content: "\r\e[K\e[?25h\r\nadded 9 packages, and audited 207 packages in 2s\r\n\r\n43 packages are looking for funding\r\n  run `npm fund` for details\r\n\r\nfound \e[32m\e[1m0\e[22m\e[39m vulnerabilities\r\n"
-  - delay: 5
-    content: "Project my-project created successfully.\r\n"
-  - delay: 14
-    content: 'G27Y0XK0JP:create-flask-react-app francescomeli$ '
-  - delay: 2578
-    content: c
-  - delay: 72
-    content: d
-  - delay: 150
-    content: ' '
-  - delay: 167
-    content: m
-  - delay: 145
-    content: 'y'
-  - delay: 254
-    content: '-project/'
-  - delay: 561
-    content: "\r\nG27Y0XK0JP:my-project francescomeli$ "
-  - delay: 1397
-    content: m
-  - delay: 111
-    content: a
-  - delay: 111
-    content: k
-  - delay: 114
-    content: e
-  - delay: 195
-    content: ' '
-  - delay: 1006
-    content: s
-  - delay: 130
-    content: t
   - delay: 133
+    content: ' '
+  - delay: 414
+    content: c
+  - delay: 216
+    content: r
+  - delay: 90
+    content: e
+  - delay: 217
+    content: a
+  - delay: 196
+    content: t
+  - delay: 75
+    content: e
+  - delay: 225
+    content: ' '
+  - delay: 585
+    content: f
+  - delay: 149
+    content: l
+  - delay: 182
     content: a
   - delay: 74
+    content: s
+  - delay: 134
+    content: k
+  - delay: 435
+    content: '-'
+  - delay: 234
     content: r
-  - delay: 146
+  - delay: 81
+    content: e
+  - delay: 241
+    content: a
+  - delay: 59
+    content: c
+  - delay: 242
     content: t
-  - delay: 607
+  - delay: 162
+    content: '-'
+  - delay: 145
+    content: a
+  - delay: 255
+    content: p
+  - delay: 157
+    content: p
+  - delay: 239
+    content: '@'
+  - delay: 292
+    content: l
+  - delay: 108
+    content: a
+  - delay: 200
+    content: t
+  - delay: 100
+    content: e
+  - delay: 170
+    content: s
+  - delay: 93
+    content: t
+  - delay: 134
     content: "\r\n"
-  - delay: 54
-    content: "npx concurrently --names 'frontend, backend' -c 'bgBlue.bold,bgMagenta.bold' \"make start_client\" \"make start_server\"\r\n"
-  - delay: 3052
-    content: "\e[45m\e[1m[ backend]\e[22m\e[49m PYTHONPATH=server poetry --directory server run python -m app\r\n\e[44m\e[1m[frontend]\e[22m\e[49m cd client && npm run dev && cd..\r\n"
-  - delay: 322
+  - delay: 2903
+    content: "\e[?25l\e[36m⠋\e[39m Running: docker --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠙\e[39m Running: docker --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠹\e[39m Running: docker --version"
+  - delay: 39
+    content: "\e[2K\e[1G\e[?25h\e[32m✔\e[39m Completed: docker --version\r\nDocker version 27.0.3, build 7d4bcd8\r\n\r\n\e[?25l\e[36m⠋\e[39m Running: poetry --version"
+  - delay: 82
+    content: "\e[2K\e[1G\e[36m⠙\e[39m Running: poetry --version"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠹\e[39m Running: poetry --version"
+  - delay: 82
+    content: "\e[2K\e[1G\e[36m⠸\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠼\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠴\e[39m Running: poetry --version"
+  - delay: 82
+    content: "\e[2K\e[1G\e[36m⠦\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠧\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠇\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠏\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠋\e[39m Running: poetry --version"
+  - delay: 82
+    content: "\e[2K\e[1G\e[36m⠙\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠹\e[39m Running: poetry --version"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠸\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠼\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠴\e[39m Running: poetry --version"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠦\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠧\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠇\e[39m Running: poetry --version"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠏\e[39m Running: poetry --version"
+  - delay: 82
+    content: "\e[2K\e[1G\e[36m⠋\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠙\e[39m Running: poetry --version"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠹\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠸\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠼\e[39m Running: poetry --version"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠴\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠦\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠧\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠇\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠏\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠋\e[39m Running: poetry --version"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠙\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠹\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠸\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠼\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠴\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠦\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠧\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠇\e[39m Running: poetry --version"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠏\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠋\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠙\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠹\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠸\e[39m Running: poetry --version"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠼\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠴\e[39m Running: poetry --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠦\e[39m Running: poetry --version"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠧\e[39m Running: poetry --version"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠇\e[39m Running: poetry --version"
+  - delay: 13
+    content: "\e[2K\e[1G\e[?25h\e[32m✔\e[39m Completed: poetry --version\r\nPoetry (version 1.8.3)\r\n\r\n\e[?25l\e[36m⠋\e[39m Running: npm --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠙\e[39m Running: npm --version"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠹\e[39m Running: npm --version"
+  - delay: 42
+    content: "\e[2K\e[1G\e[?25h\e[32m✔\e[39m Completed: npm --version\r\n10.1.0\r\n\r\n\r\n\e[32m?\e[39m \e[1mProject name:\e[22m\e[17G"
+  - delay: 921
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject name:\e[22m m\e[18G"
+  - delay: 198
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject name:\e[22m my\e[19G"
+  - delay: 218
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject name:\e[22m my\e[20G"
+  - delay: 156
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject name:\e[22m my p\e[21G"
+  - delay: 158
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject name:\e[22m my pr\e[22G"
+  - delay: 112
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject name:\e[22m my pro\e[23G"
+  - delay: 187
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject name:\e[22m my proj\e[24G"
+  - delay: 93
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject name:\e[22m my proje\e[25G"
+  - delay: 186
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject name:\e[22m my projec\e[26G"
+  - delay: 219
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject name:\e[22m my project\e[27G"
+  - delay: 243
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject name:\e[22m my project\e[27G\e[2K\e[G\e[32m?\e[39m \e[1mProject name:\e[22m \e[36mmy project\e[39m\e[27G\r\n\e[?25h\e[32m?\e[39m \e[1mProject name will be my-project:\e[22m \e[2m(Y/n)\e[22m\e[42G"
+  - delay: 1547
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject name will be my-project:\e[22m \e[36myes\e[39m\e[39G\r\n\e[?25h\e[32m?\e[39m \e[1mProject description:\e[22m\e[24G"
+  - delay: 702
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mProject description:\e[22m\e[24G\e[2K\e[G\e[32m?\e[39m \e[1mProject description:\e[22m \e[36m\e[39m\e[24G\r\n\e[?25h\e[32m?\e[39m \e[1mAuthor:\e[22m\e[11G"
+  - delay: 402
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mAuthor:\e[22m\e[11G\e[2K\e[G\e[32m?\e[39m \e[1mAuthor:\e[22m \e[36m\e[39m\e[11G\r\n\e[?25h\e[32m?\e[39m \e[1mPostgresql username:\e[22m \e[2m(root)\e[22m\e[31G"
+  - delay: 410
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mPostgresql username:\e[22m \e[2m(root)\e[22m\e[31G\e[2K\e[G\e[32m?\e[39m \e[1mPostgresql username:\e[22m root\e[28G\e[2K\e[G\e[32m?\e[39m \e[1mPostgresql username:\e[22m \e[36mroot\e[39m\e[28G\r\n\e[?25h\e[32m?\e[39m \e[1mPostgresql password:\e[22m \e[2m(root)\e[22m\e[31G"
+  - delay: 427
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mPostgresql password:\e[22m \e[2m(root)\e[22m\e[31G\e[2K\e[G\e[32m?\e[39m \e[1mPostgresql password:\e[22m root\e[28G\e[2K\e[G\e[32m?\e[39m \e[1mPostgresql password:\e[22m \e[36mroot\e[39m\e[28G\r\n\e[?25h\e[32m?\e[39m \e[1mPostgresql database name:\e[22m \e[2m(db)\e[22m\e[34G"
+  - delay: 430
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mPostgresql database name:\e[22m \e[2m(db)\e[22m\e[34G\e[2K\e[G\e[32m?\e[39m \e[1mPostgresql database name:\e[22m db\e[31G\e[2K\e[G\e[32m?\e[39m \e[1mPostgresql database name:\e[22m \e[36mdb\e[39m\e[31G\r\n\e[?25h"
+  - delay: 80
+    content: "\e[?25l\e[36m⠋\e[39m Running: poetry install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠙\e[39m Running: poetry install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠹\e[39m Running: poetry install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠸\e[39m Running: poetry install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠼\e[39m Running: poetry install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠴\e[39m Running: poetry install"
+  - delay: 82
+    content: "\e[2K\e[1G\e[36m⠦\e[39m Running: poetry install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠧\e[39m Running: poetry install"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠇\e[39m Running: poetry install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠏\e[39m Running: poetry install"
+  - delay: 82
+    content: "\e[2K\e[1G\e[36m⠋\e[39m Running: poetry install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠙\e[39m Running: poetry install"
+  - delay: 82
+    content: "\e[2K\e[1G\e[36m⠹\e[39m Running: poetry install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠸\e[39m Running: poetry install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠼\e[39m Running: poetry install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠴\e[39m Running: poetry install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠦\e[39m Running: poetry install"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠧\e[39m Running: poetry install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠇\e[39m Running: poetry install"
+  - delay: 82
+    content: "\e[2K\e[1G\e[36m⠏\e[39m Running: poetry install"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠋\e[39m Running: poetry install"
+  - delay: 79
+    content: "\e[2K\e[1G\e[?25h\e[32m✔\e[39m Completed: poetry install\r\n\e[?25l\e[36m⠋\e[39m Running: npm create vite@latest my-project -- --template react-ts"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠙\e[39m Running: npm create vite@latest my-project -- --template react-ts"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠹\e[39m Running: npm create vite@latest my-project -- --template react-ts"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠸\e[39m Running: npm create vite@latest my-project -- --template react-ts"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠼\e[39m Running: npm create vite@latest my-project -- --template react-ts"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠴\e[39m Running: npm create vite@latest my-project -- --template react-ts"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠦\e[39m Running: npm create vite@latest my-project -- --template react-ts"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠧\e[39m Running: npm create vite@latest my-project -- --template react-ts"
+  - delay: 52
+    content: "\e[2K\e[1G\e[?25h\e[32m✔\e[39m Completed: npm create vite@latest my-project -- --template react-ts\r\n"
+  - delay: 22
+    content: "\e[?25l\e[36m⠋\e[39m Running: npm install"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠙\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠹\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠸\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠼\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠴\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠦\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠧\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠇\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠏\e[39m Running: npm install"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠋\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠙\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠹\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠸\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠼\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠴\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠦\e[39m Running: npm install"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠧\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠇\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠏\e[39m Running: npm install"
+  - delay: 82
+    content: "\e[2K\e[1G\e[36m⠋\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠙\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠹\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠸\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠼\e[39m Running: npm install"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠴\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠦\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠧\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠇\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠏\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠋\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠙\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠹\e[39m Running: npm install"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠸\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠼\e[39m Running: npm install"
+  - delay: 82
+    content: "\e[2K\e[1G\e[36m⠴\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠦\e[39m Running: npm install"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠧\e[39m Running: npm install"
+  - delay: 31
+    content: "\e[2K\e[1G\e[?25h\e[32m✔\e[39m Completed: npm install\r\n\e[?25l\e[36m⠋\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠙\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠹\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 82
+    content: "\e[2K\e[1G\e[36m⠸\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠼\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠴\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠦\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠧\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠇\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠏\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠋\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠙\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠹\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠸\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠼\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠴\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠦\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 82
+    content: "\e[2K\e[1G\e[36m⠧\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠇\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠏\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠋\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 82
+    content: "\e[2K\e[1G\e[36m⠙\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠹\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠸\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠼\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠴\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠦\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠧\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠇\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠏\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 82
+    content: "\e[2K\e[1G\e[36m⠋\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠙\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠹\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠸\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠼\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠴\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠦\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠧\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠇\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠏\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠋\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠙\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠹\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠸\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠼\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠴\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠦\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠧\e[39m Running: npx install-peerdeps --dev eslint-config-airbnb"
+  - delay: 47
+    content: "\e[2K\e[1G\e[?25h\e[32m✔\e[39m Completed: npx install-peerdeps --dev eslint-config-airbnb\r\n\e[?25l\e[36m⠋\e[39m Running: npm uninstall @eslint/js"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠙\e[39m Running: npm uninstall @eslint/js"
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠹\e[39m Running: npm uninstall @eslint/js"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠸\e[39m Running: npm uninstall @eslint/js"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠼\e[39m Running: npm uninstall @eslint/js"
+  - delay: 82
+    content: "\e[2K\e[1G\e[36m⠴\e[39m Running: npm uninstall @eslint/js"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠦\e[39m Running: npm uninstall @eslint/js"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠧\e[39m Running: npm uninstall @eslint/js"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠇\e[39m Running: npm uninstall @eslint/js"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠏\e[39m Running: npm uninstall @eslint/js"
+  - delay: 78
+    content: "\e[2K\e[1G\e[?25h\e[32m✔\e[39m Completed: npm uninstall @eslint/js\r\n\e[?25l\e[36m⠋\e[39m Running: rm eslint.config.js"
+  - delay: 15
+    content: "\e[2K\e[1G\e[?25h\e[32m✔\e[39m Completed: rm eslint.config.js\r\nProject my-project created successfully.\r\n"
+  - delay: 7
+    content: 'G27Y0XK0JP:create-flask-react-app francescomeli$ '
+  - delay: 2490
+    content: c
+  - delay: 186
+    content: d
+  - delay: 224
+    content: ' '
+  - delay: 1485
+    content: m
+  - delay: 188
+    content: 'y'
+  - delay: 608
+    content: '-project/'
+  - delay: 389
+    content: "\r\nG27Y0XK0JP:my-project francescomeli$ "
+  - delay: 549
+    content: m
+  - delay: 110
+    content: a
+  - delay: 172
+    content: k
+  - delay: 114
+    content: e
+  - delay: 202
+    content: ' '
+  - delay: 224
+    content: s
+  - delay: 182
+    content: t
+  - delay: 192
+    content: a
+  - delay: 112
+    content: r
+  - delay: 211
+    content: t
+  - delay: 196
+    content: "\r\n"
+  - delay: 43
+    content: "npx concurrently --names 'frontend,backend ,db      ' -c 'bgBlue.bold,bgMagenta.bold,bgGreen.bold' \"make start_client\" \"make start_server\" \"make start_db\"\r\n"
+  - delay: 2381
+    content: "\e[44m\e[1m[frontend]\e[22m\e[49m cd client && npm run dev && cd..\r\n\e[45m\e[1m[backend ]\e[22m\e[49m PYTHONPATH=server poetry --directory server run python -m app\r\n\e[42m\e[1m[db      ]\e[22m\e[49m docker compose -f docker-compose.development.yml up\r\n"
+  - delay: 234
     content: "\e[44m\e[1m[frontend]\e[22m\e[49m \r\n\e[44m\e[1m[frontend]\e[22m\e[49m > my-project@0.0.0 dev\r\n\e[44m\e[1m[frontend]\e[22m\e[49m > vite\r\n\e[44m\e[1m[frontend]\e[22m\e[49m \r\n"
-  - delay: 935
-    content: "\e[44m\e[1m[frontend]\e[22m\e[49m \r\n\e[44m\e[1m[frontend]\e[22m\e[49m   \e[32m\e[1mVITE\e[22m v5.4.1\e[39m  \e[2mready in \e[0m\e[1m651\e[22m\e[2m\e[0m ms\e[22m\r\n\e[44m\e[1m[frontend]\e[22m\e[49m \r\n\e[44m\e[1m[frontend]\e[22m\e[49m   \e[32m➜\e[39m  \e[1mLocal\e[22m:   \e[36mhttp://localhost:\e[1m5173\e[22m/\e[39m\r\n\e[44m\e[1m[frontend]\e[22m\e[49m \e[2m  \e[32m➜\e[39m  \e[1mNetwork\e[22m\e[2m: use \e[22m\e[1m--host\e[22m\e[2m to expose\e[22m\r\n"
-  - delay: 4537
-    content: "\e[45m\e[1m[ backend]\e[22m\e[49m  * Serving Flask app 'server'\r\n\e[45m\e[1m[ backend]\e[22m\e[49m  * Debug mode: on\r\n"
-  - delay: 73
-    content: "\e[45m\e[1m[ backend]\e[22m\e[49m \e[31m\e[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\e[0m\r\n\e[45m\e[1m[ backend]\e[22m\e[49m  * Running on all addresses (0.0.0.0)\r\n\e[45m\e[1m[ backend]\e[22m\e[49m  * Running on http://127.0.0.1:5000\r\n\e[45m\e[1m[ backend]\e[22m\e[49m  * Running on http://192.168.227.213:5000\r\n\e[45m\e[1m[ backend]\e[22m\e[49m \e[33mPress CTRL+C to quit\e[0m\r\n"
-  - delay: 12
-    content: "\e[45m\e[1m[ backend]\e[22m\e[49m  * Restarting with stat\r\n"
-  - delay: 1795
-    content: "\e[45m\e[1m[ backend]\e[22m\e[49m  * Debugger is active!\r\n"
-  - delay: 17
-    content: "\e[45m\e[1m[ backend]\e[22m\e[49m  * Debugger PIN: 104-430-398\r\n"
-  - delay: 3483
+  - delay: 261
+    content: "\e[42m\e[1m[db      ]\e[22m\e[49m  Container my-project-db-1  Created\r\n\e[42m\e[1m[db      ]\e[22m\e[49m Attaching to db-1\r\n"
+  - delay: 280
+    content: "\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | The files belonging to this database system will be owned by user \"postgres\".\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | This user must also own the server process.\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | \r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | The database cluster will be initialized with locale \"en_US.utf8\".\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | The default database encoding has accordingly been set to \"UTF8\".\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | The default text search configuration will be set to \"english\".\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | \r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | Data page checksums are disabled.\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | \r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | fixing permissions on existing directory /var/lib/postgresql/data ... ok\r\n"
+  - delay: 8
+    content: "\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | creating subdirectories ... ok\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | selecting dynamic shared memory implementation ... posix\r\n"
+  - delay: 13
+    content: "\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | selecting default max_connections ... 100\r\n"
+  - delay: 13
+    content: "\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | selecting default shared_buffers ... 128MB\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | selecting default time zone ... Etc/UTC\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | creating configuration files ... ok\r\n"
+  - delay: 279
+    content: "\e[44m\e[1m[frontend]\e[22m\e[49m \r\n\e[44m\e[1m[frontend]\e[22m\e[49m   \e[32m\e[1mVITE\e[22m v5.4.1\e[39m  \e[2mready in \e[0m\e[1m677\e[22m\e[2m\e[0m ms\e[22m\r\n\e[44m\e[1m[frontend]\e[22m\e[49m \r\n\e[44m\e[1m[frontend]\e[22m\e[49m   \e[32m➜\e[39m  \e[1mLocal\e[22m:   \e[36mhttp://localhost:\e[1m5173\e[22m/\e[39m\r\n\e[44m\e[1m[frontend]\e[22m\e[49m \e[2m  \e[32m➜\e[39m  \e[1mNetwork\e[22m\e[2m: use \e[22m\e[1m--host\e[22m\e[2m to expose\e[22m\r\n"
+  - delay: 205
+    content: "\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | running bootstrap script ... ok\r\n"
+  - delay: 162
+    content: "\e[45m\e[1m[backend ]\e[22m\e[49m  * Serving Flask app 'server'\r\n\e[45m\e[1m[backend ]\e[22m\e[49m  * Debug mode: on\r\n"
+  - delay: 26
+    content: "\e[45m\e[1m[backend ]\e[22m\e[49m \e[31m\e[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\e[0m\r\n\e[45m\e[1m[backend ]\e[22m\e[49m  * Running on all addresses (0.0.0.0)\r\n\e[45m\e[1m[backend ]\e[22m\e[49m  * Running on http://127.0.0.1:5000\r\n\e[45m\e[1m[backend ]\e[22m\e[49m  * Running on http://192.168.1.13:5000\r\n\e[45m\e[1m[backend ]\e[22m\e[49m \e[33mPress CTRL+C to quit\e[0m\r\n\e[45m\e[1m[backend ]\e[22m\e[49m  * Restarting with stat\r\n"
+  - delay: 297
+    content: "\e[45m\e[1m[backend ]\e[22m\e[49m  * Debugger is active!\r\n"
+  - delay: 9
+    content: "\e[45m\e[1m[backend ]\e[22m\e[49m  * Debugger PIN: 104-430-398\r\n"
+  - delay: 427
+    content: "\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | performing post-bootstrap initialization ... ok\r\n"
+  - delay: 283
+    content: "\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | syncing data to disk ... ok\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | \r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | \r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | Success. You can now start the database server using:\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | \r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  |     pg_ctl -D /var/lib/postgresql/data -l logfile start\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | \r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | initdb: warning: enabling \"trust\" authentication for local connections\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | You can change this by editing pg_hba.conf or using the option -A, or\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | --auth-local and --auth-host, the next time you run initdb.\r\n"
+  - delay: 22
+    content: "\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | waiting for server to start....2024-08-19 22:59:52.231 UTC [49] LOG:  starting PostgreSQL 13.16 (Debian 13.16-1.pgdg120+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | 2024-08-19 22:59:52.232 UTC [49] LOG:  listening on Unix socket \"/var/run/postgresql/.s.PGSQL.5432\"\r\n"
+  - delay: 9
+    content: "\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | 2024-08-19 22:59:52.241 UTC [50] LOG:  database system was shut down at 2024-08-19 22:59:51 UTC\r\n"
+  - delay: 5
+    content: "\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | 2024-08-19 22:59:52.245 UTC [49] LOG:  database system is ready to accept connections\r\n"
+  - delay: 82
+    content: "\e[42m\e[1m[db      ]\e[22m\e[49m db-1  |  done\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | server started\r\n"
+  - delay: 299
+    content: "\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | CREATE DATABASE\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | \r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | \r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | \r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | waiting for server to shut down...2024-08-19 22:59:52.629 UTC [49] LOG:  received fast shutdown request\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | .2024-08-19 22:59:52.629 UTC [49] LOG:  aborting any active transactions\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | 2024-08-19 22:59:52.630 UTC [49] LOG:  background worker \"logical replication launcher\" (PID 56) exited with exit code 1\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | 2024-08-19 22:59:52.630 UTC [51] LOG:  shutting down\r\n"
+  - delay: 11
+    content: "\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | 2024-08-19 22:59:52.641 UTC [49] LOG:  database system is shut down\r\n"
+  - delay: 90
+    content: "\e[42m\e[1m[db      ]\e[22m\e[49m db-1  |  done\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | server stopped\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | \r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | PostgreSQL init process complete; ready for start up.\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | \r\n"
+  - delay: 16
+    content: "\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | 2024-08-19 22:59:52.747 UTC [1] LOG:  starting PostgreSQL 13.16 (Debian 13.16-1.pgdg120+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | 2024-08-19 22:59:52.747 UTC [1] LOG:  listening on IPv4 address \"0.0.0.0\", port 5432\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | 2024-08-19 22:59:52.747 UTC [1] LOG:  listening on IPv6 address \"::\", port 5432\r\n\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | 2024-08-19 22:59:52.750 UTC [1] LOG:  listening on Unix socket \"/var/run/postgresql/.s.PGSQL.5432\"\r\n"
+  - delay: 6
+    content: "\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | 2024-08-19 22:59:52.756 UTC [64] LOG:  database system was shut down at 2024-08-19 22:59:52 UTC\r\n"
+  - delay: 6
+    content: "\e[42m\e[1m[db      ]\e[22m\e[49m db-1  | 2024-08-19 22:59:52.761 UTC [1] LOG:  database system is ready to accept connections\r\n"
+  - delay: 4264
+    content: "^D\b\b"
+  - delay: 1776
     content: ^C
-  - delay: 25
-    content: "\e[44m\e[1m[frontend]\e[22m\e[49m make[1]: *** [start_client] Interrupt: 2\r\n\e[44m\e[1m[frontend]\e[22m\e[49m \e[0mmake start_client exited with code SIGINT\e[0m\r\n"
-  - delay: 125
-    content: "\e[45m\e[1m[ backend]\e[22m\e[49m \e[0mmake start_server exited with code SIGINT\e[0m\r\n"
+  - delay: 41
+    content: "\e[42m\e[1m[db      ]\e[22m\e[49m Gracefully stopping... (press Ctrl+C again to force)\r\n\e[42m\e[1m[db      ]\e[22m\e[49m  Container my-project-db-1  Stopping\r\n\e[44m\e[1m[frontend]\e[22m\e[49m make[1]: *** [start_client] Interrupt: 2\r\n\e[44m\e[1m[frontend]\e[22m\e[49m \e[0mmake start_client exited with code SIGINT\e[0m\r\n"
+  - delay: 152
+    content: "\e[42m\e[1m[db      ]\e[22m\e[49m  Container my-project-db-1  Stopped\r\n"
+  - delay: 7
+    content: "\e[42m\e[1m[db      ]\e[22m\e[49m canceled\r\n\e[42m\e[1m[db      ]\e[22m\e[49m make[1]: *** [start_db] Error 130\r\n\e[42m\e[1m[db      ]\e[22m\e[49m \e[0mmake start_db exited with code SIGINT\e[0m\r\n\e[45m\e[1m[backend ]\e[22m\e[49m \e[0mmake start_server exited with code SIGINT\e[0m\r\n"
   - delay: 7
     content: "\r\nG27Y0XK0JP:my-project francescomeli$ "
-  - delay: 814
+  - delay: 284
     content: "logout\r\n"

@@ -10,7 +10,8 @@
     "build": "npx tsc",
     "postbuild": "node scripts/postbuild.js",
     "prestart": "npm run build",
-    "start": "node dist/generate.js"
+    "start": "node dist/generate.js",
+    "record-demo": "terminalizer record demo -c config.yml"
   },
   "author": "Francesco Meli",
   "license": "ISC",
