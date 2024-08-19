@@ -11,7 +11,7 @@ Follow these steps to create and start your new application:
 To generate a new Flask-React application, run the following command in your terminal:
 
 ```bash
-npm create flask-react@latest
+npm create flask-react-app@latest
 ```
 
 This command will guide you through a few questions to customize your project setup.
