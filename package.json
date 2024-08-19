@@ -19,10 +19,12 @@
     "@types/ejs": "^3.1.5",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.4.0",
+    "@types/npmcli__package-json": "^4.0.4",
     "standard-version": "^9.5.0",
     "typescript": "^5.5.4"
   },
   "dependencies": {
+    "@npmcli/package-json": "^5.2.0",
     "ejs": "^3.1.10",
     "fs-extra": "^11.2.0",
     "inquirer": "^10.1.8",

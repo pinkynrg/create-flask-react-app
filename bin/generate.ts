@@ -3,6 +3,8 @@ import path from 'path';
 import { input, confirm } from '@inquirer/prompts';
 import slugify from 'slugify';
 import { execSync } from 'child_process';
+import PackageJson from '@npmcli/package-json'
+
 
 // Constants for directory paths
 const TEMPLATE_DIR = path.join(__dirname, '../template');
@@ -175,9 +177,10 @@ async function generate(): Promise<void> {
   runCommand('npx install-peerdeps --dev eslint-config-airbnb', { cwd: clientDir, stdio: 'inherit' })
 
   const packages = [
-    { name: 'axios', version: '1.7.4', devDependency: false },
-    { name: 'moment', version: '2.30.1', devDependency: false },
-    { name: 'eslint-plugin-prefer-arrow', version: '1.2.3', devDependency: true },
+    { name: 'axios', version: '^1.7.4', devDependency: false },
+    { name: 'moment', version: '^2.30.1', devDependency: false },
+    { name: 'eslint-plugin-prefer-arrow', version: '^1.2.3', devDependency: true },
+    { name: '@types/node', version: '^22.4.1', devDependency: true },
   ];
   
   packages.forEach((pkg) => {
@@ -186,6 +189,17 @@ async function generate(): Promise<void> {
       : `npm install ${pkg.name}@${pkg.version} --save`;
       runCommand(command, { cwd: clientDir, stdio: 'inherit' });
     });
+
+  runCommand('npm uninstall @eslint/js', { cwd: clientDir, stdio: 'inherit' })  
+  runCommand('rm eslint.config.js', { cwd: clientDir, stdio: 'inherit' })
+  const pkgJson = await PackageJson.load(clientDir)
+  pkgJson.update({
+    scripts: {
+      ...pkgJson.content.scripts,
+      'lint': 'eslint **/*.{ts,tsx}',
+    }
+  })
+  pkgJson.save()
 
   console.log(`Project ${userInput.projectName} created successfully.`);
 }

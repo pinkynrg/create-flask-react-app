@@ -6,7 +6,6 @@ import path from 'path'
 export default ({mode}: {mode: string}) => {
   const envDirectory = path.dirname(process.cwd());
   const env = loadEnv(mode, envDirectory, '')
-  console.log()
   return defineConfig({
     envDir: envDirectory,
     plugins: [react()],
