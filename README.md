@@ -2,6 +2,8 @@
 
 Welcome to the **Create Flask React App** project! This project provides a simple and efficient way to bootstrap a new web application that combines Flask for the backend and React for the frontend.
 
+![demo](https://github.com/pinkynrg/create-flask-react-app/blob/main/demo.gif)
+
 ## Getting Started
 
 Follow these steps to create and start your new application:
