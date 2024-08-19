@@ -148,8 +148,8 @@ async function generate(): Promise<void> {
     postgresUser: await askForInput({ message: 'Postgresql username', defaultValue: 'root' }),
     postgresPassword: await askForInput({ message: 'Postgresql password', defaultValue: 'root' }),
     postgresDatabase: await askForInput({ message: 'Postgresql database name', defaultValue: 'db' }),
-    dockerHubRegistryName: await askForInput({ message: 'DockerHub registry name' }),
-    dockerHubLoginToken: await askForInput({ message: 'DockerHub login token' }),
+    // dockerHubRegistryName: await askForInput({ message: 'DockerHub registry name' }),
+    // dockerHubLoginToken: await askForInput({ message: 'DockerHub login token' }),
   }
 
   // Set up project directories
@@ -183,12 +183,14 @@ async function generate(): Promise<void> {
     { name: '@types/node', version: '^22.4.1', devDependency: true },
   ];
   
-  packages.map(async (pkg) => {
-    const command = pkg.devDependency 
-      ? `npm install ${pkg.name}@${pkg.version} --save-dev` 
-      : `npm install ${pkg.name}@${pkg.version} --save`;
+  await Promise.all(
+    packages.map(async (pkg) => {
+      const command = pkg.devDependency 
+        ? `npm install ${pkg.name}@${pkg.version} --save-dev` 
+        : `npm install ${pkg.name}@${pkg.version} --save`;
       await runCommand(command, { cwd: clientDir });
-    });
+    })
+  );
 
   await runCommand('npm uninstall @eslint/js', { cwd: clientDir })  
   await runCommand('rm eslint.config.js', { cwd: clientDir })
