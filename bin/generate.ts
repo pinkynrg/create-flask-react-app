@@ -102,6 +102,8 @@ async function generate() {
   
   writeEnvFile(projectDir, {
     PROJECT_NAME: projectName,
+    SERVER_PORT: '5000',
+    SERVER_HOST: '127.0.0.1',
     POSTGRES_HOST: '127.0.0.1',
     POSTGRES_USER: postgresUser,
     POSTGRES_PASSWORD: postgresPassword,
