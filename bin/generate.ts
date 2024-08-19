@@ -2,9 +2,9 @@ import fs from 'fs-extra';
 import path from 'path';
 import { input, confirm } from '@inquirer/prompts';
 import slugify from 'slugify';
-import { execSync } from 'child_process';
+import { exec } from 'child_process';
 import PackageJson from '@npmcli/package-json'
-
+import ora from 'ora'
 
 // Constants for directory paths
 const TEMPLATE_DIR = path.join(__dirname, '../template');
@@ -52,29 +52,29 @@ const askForInput = async (data: {
 };
 
 /**
- * Check if a command exists on the system by running it.
- * @param {string} command - The command to check.
- */
-const checkIfCommandExists = (command: string): void => {
-  try {
-    execSync(`${command} --version`, { stdio: 'ignore' });
-    console.log(`✅ ${command} is installed.`);
-  } catch (error: any) {
-    console.error(`${command} is not installed. Please install ${command} first.`);
-    process.exit(1);
-  }
-};
-
-/**
  * Run a shell command in a specified directory.
  * @param {string} command - The command to run.
  * @param {Object} options - Options for execSync, such as cwd and stdio.
  */
-const runCommand = (command: string, options: { cwd: string; stdio: 'inherit' }): void => {
-  console.log(command);
-  execSync(command, options);
-};
+const runCommand = (command: string, options: { cwd: string, output?: boolean }): Promise<void> => {
+  const spinner = ora(`Running: ${command}`).start();
 
+  return new Promise((resolve, reject) => {
+    exec(command, options, (error, stdout, stderr) => {
+      if (error) {
+        spinner.fail(`Failed: ${command}`);
+        console.error(stderr);
+        reject(error);  // Reject the promise with the error
+        return;
+      }
+      spinner.succeed(`Completed: ${command}`);
+      if (!!options.output) {
+        console.log(stdout)
+      }
+      resolve();  // Resolve the promise successfully
+    });
+  });
+};
 /**
  * Move files from one directory to another, preserving existing files.
  * @param {string} sourceDir - The source directory.
@@ -131,9 +131,9 @@ const copyAndReplacePlaceholders = (sourceDir: string, destDir: string, replacem
  */
 async function generate(): Promise<void> {
   // Check required commands are installed
-  checkIfCommandExists('docker');
-  checkIfCommandExists('poetry');
-  checkIfCommandExists('npm');
+  await runCommand('docker --version', { cwd: CURRENT_DIR, output: true });
+  await runCommand('poetry --version', { cwd: CURRENT_DIR, output: true });
+  await runCommand('npm --version', { cwd: CURRENT_DIR, output: true });
 
   nextLine();
 
@@ -162,19 +162,19 @@ async function generate(): Promise<void> {
   copyAndReplacePlaceholders(TEMPLATE_DIR, projectDir, userInput);
 
   // Install Python dependencies using Poetry
-  runCommand('poetry install', { cwd: serverDir, stdio: 'inherit' });
+  await runCommand('poetry install', { cwd: serverDir });
 
   // Create a new Vite project with React and TypeScript
-  runCommand(`npm create vite@latest ${userInput.projectName} -- --template react-ts`, { cwd: projectDir, stdio: 'inherit' });
+  await runCommand(`npm create vite@latest ${userInput.projectName} -- --template react-ts`, { cwd: projectDir });
   
   // Move files from temporaryClientDir to clientDir, preserving existing files
   moveFilesPreserveExisting(temporaryClientDir, clientDir);
 
   // Install basic npm packages
-  runCommand(`npm install`, { cwd: clientDir, stdio: 'inherit' });
+  await runCommand(`npm install`, { cwd: clientDir });
 
   // Install Airbnb ESLint config
-  runCommand('npx install-peerdeps --dev eslint-config-airbnb', { cwd: clientDir, stdio: 'inherit' })
+  await runCommand('npx install-peerdeps --dev eslint-config-airbnb', { cwd: clientDir })
 
   const packages = [
     { name: 'axios', version: '^1.7.4', devDependency: false },
@@ -183,15 +183,15 @@ async function generate(): Promise<void> {
     { name: '@types/node', version: '^22.4.1', devDependency: true },
   ];
   
-  packages.forEach((pkg) => {
+  packages.map(async (pkg) => {
     const command = pkg.devDependency 
       ? `npm install ${pkg.name}@${pkg.version} --save-dev` 
       : `npm install ${pkg.name}@${pkg.version} --save`;
-      runCommand(command, { cwd: clientDir, stdio: 'inherit' });
+      await runCommand(command, { cwd: clientDir });
     });
 
-  runCommand('npm uninstall @eslint/js', { cwd: clientDir, stdio: 'inherit' })  
-  runCommand('rm eslint.config.js', { cwd: clientDir, stdio: 'inherit' })
+  await runCommand('npm uninstall @eslint/js', { cwd: clientDir })  
+  await runCommand('rm eslint.config.js', { cwd: clientDir })
   const pkgJson = await PackageJson.load(clientDir)
   pkgJson.update({
     scripts: {
