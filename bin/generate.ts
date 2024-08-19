@@ -1,6 +1,5 @@
 import fs from 'fs-extra';
 import path from 'path';
-import ejs from 'ejs';
 import { input, confirm } from '@inquirer/prompts';
 import slugify from 'slugify';
 import { execSync } from 'child_process';
@@ -14,7 +13,7 @@ const CURRENT_DIR = process.cwd();
  * @param {string} str - The string to normalize.
  * @returns {string} - The normalized string.
  */
-const normalizeString = (str) => slugify(str, { lower: true, strict: true });
+const normalizeString = (str: string): string => slugify(str, { lower: true, strict: true });
 
 /**
  * Prompt the user for input with optional normalization.
@@ -25,18 +24,23 @@ const normalizeString = (str) => slugify(str, { lower: true, strict: true });
  * @param {boolean} [data.required=false] - Whether the input is required.
  * @returns {Promise<string>} - The user's input, possibly normalized.
  */
-const askForInput = async (data) => {
+const askForInput = async (data: {
+  message: string;
+  normalize?: boolean;
+  defaultValue?: string;
+  required?: boolean;
+}): Promise<string> => {
   const { message, normalize = false, required = false, defaultValue } = data;
-  const answerRaw = await input({ message: `${message}:`, default: defaultValue, required });
+  const answerRaw: string = await input({ message: `${message}:`, default: defaultValue, required });
 
   if (!normalize) {
     return answerRaw;
   }
 
-  const answer = normalizeString(answerRaw);
+  const answer: string = normalizeString(answerRaw);
 
   if (answerRaw !== answer) {
-    const isOk = await confirm({ default: true, message: `${message} will be ${answer}:` });
+    const isOk: boolean = await confirm({ default: true, message: `${message} will be ${answer}:` });
     if (!isOk) {
       return askForInput(data);
     }
@@ -49,11 +53,11 @@ const askForInput = async (data) => {
  * Check if a command exists on the system by running it.
  * @param {string} command - The command to check.
  */
-const checkIfCommandExists = (command) => {
+const checkIfCommandExists = (command: string): void => {
   try {
     execSync(`${command} --version`, { stdio: 'ignore' });
     console.log(`✅ ${command} is installed.`);
-  } catch (error) {
+  } catch (error: any) {
     console.error(`${command} is not installed. Please install ${command} first.`);
     process.exit(1);
   }
@@ -64,7 +68,7 @@ const checkIfCommandExists = (command) => {
  * @param {string} command - The command to run.
  * @param {Object} options - Options for execSync, such as cwd and stdio.
  */
-const runCommand = (command, options) => {
+const runCommand = (command: string, options: { cwd: string; stdio: 'inherit' }): void => {
   execSync(command, options);
 };
 
@@ -73,8 +77,8 @@ const runCommand = (command, options) => {
  * @param {string} projectDir - The directory to write the .env file to.
  * @param {Object} envData - The environment variables to include.
  */
-const writeEnvFile = (projectDir, envData) => {
-  const envContent = Object.entries(envData)
+const writeEnvFile = (projectDir: string, envData: { [key: string]: string }): void => {
+  const envContent: string = Object.entries(envData)
     .map(([key, value]) => `${key}=${value}`)
     .join('\n')
     .trim();
@@ -87,8 +91,8 @@ const writeEnvFile = (projectDir, envData) => {
  * @param {string} serverDir - The server directory to write the file to.
  * @param {Object} pyProjectData - The data for the pyproject.toml file.
  */
-const writePyProjectFile = (serverDir, pyProjectData) => {
-  const pyProjectContent = `
+const writePyProjectFile = (serverDir: string, pyProjectData: { name: string; description: string; author: string }): void => {
+  const pyProjectContent: string = `
 [tool.poetry]
 name = "${pyProjectData.name}"
 version = "0.0.1"
@@ -111,7 +115,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
   `.trim();
 
-  const pyProjectPath = path.join(serverDir, 'pyproject.toml');
+  const pyProjectPath: string = path.join(serverDir, 'pyproject.toml');
   fs.writeFileSync(pyProjectPath, pyProjectContent);
 };
 
@@ -120,7 +124,7 @@ build-backend = "poetry.core.masonry.api"
  * @param {string} sourceDir - The source directory.
  * @param {string} destDir - The destination directory.
  */
-const moveFilesPreserveExisting = (sourceDir, destDir) => {
+const moveFilesPreserveExisting = (sourceDir: string, destDir: string): void => {
   fs.copySync(sourceDir, destDir, { overwrite: false, errorOnExist: false });
   fs.removeSync(sourceDir); // Optionally remove the source directory after copying
 };
@@ -128,12 +132,12 @@ const moveFilesPreserveExisting = (sourceDir, destDir) => {
 /**
  * Print an empty line to the console.
  */
-const nextLine = () => console.log('');
+const nextLine = (): void => console.log('');
 
 /**
  * Main function to generate a new project with the specified configurations.
  */
-async function generate() {
+async function generate(): Promise<void> {
   // Check required commands are installed
   checkIfCommandExists('docker');
   checkIfCommandExists('poetry');
@@ -142,20 +146,20 @@ async function generate() {
   nextLine();
 
   // Gather project information from the user
-  const projectName = await askForInput({ message: 'Project name', normalize: true, required: true });
-  const projectDescription = await askForInput({ message: 'Project description' });
-  const author = await askForInput({ message: 'Author' });
-  const postgresUser = await askForInput({ message: 'Postgresql username', defaultValue: 'root' });
-  const postgresPassword = await askForInput({ message: 'Postgresql password', defaultValue: 'root' });
-  const postgresDatabase = await askForInput({ message: 'Postgresql database name', defaultValue: 'db' });
-  const dockerHubRegistryName = await askForInput({ message: 'DockerHub registry name' });
-  const dockerHubLoginToken = await askForInput({ message: 'DockerHub login token' });
+  const projectName: string = await askForInput({ message: 'Project name', normalize: true, required: true });
+  const projectDescription: string = await askForInput({ message: 'Project description' });
+  const author: string = await askForInput({ message: 'Author' });
+  const postgresUser: string = await askForInput({ message: 'Postgresql username', defaultValue: 'root' });
+  const postgresPassword: string = await askForInput({ message: 'Postgresql password', defaultValue: 'root' });
+  const postgresDatabase: string = await askForInput({ message: 'Postgresql database name', defaultValue: 'db' });
+  const dockerHubRegistryName: string = await askForInput({ message: 'DockerHub registry name' });
+  const dockerHubLoginToken: string = await askForInput({ message: 'DockerHub login token' });
 
   // Set up project directories
-  const projectDir = path.join(CURRENT_DIR, projectName);
-  const serverDir = path.join(projectDir, 'server');
-  const clientDir = path.join(projectDir, 'client');
-  const temporaryClientDir = path.join(CURRENT_DIR, projectName, projectName);
+  const projectDir: string = path.join(CURRENT_DIR, projectName);
+  const serverDir: string = path.join(projectDir, 'server');
+  const clientDir: string = path.join(projectDir, 'client');
+  const temporaryClientDir: string = path.join(CURRENT_DIR, projectName, projectName);
 
   fs.mkdirSync(projectDir);
   fs.copySync(TEMPLATE_DIR, projectDir);
@@ -188,7 +192,7 @@ async function generate() {
   runCommand(`npm install`, { cwd: clientDir, stdio: 'inherit' });
 
   // Install additional useful npm packages
-  ['moment', 'axios'].forEach((pkg) => {
+  ['moment', 'axios'].forEach((pkg: string) => {
     runCommand(`npm install ${pkg}`, { cwd: clientDir, stdio: 'inherit' });
   });
 
