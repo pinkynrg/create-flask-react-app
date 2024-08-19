@@ -11,7 +11,7 @@ const CURRENT_DIR = process.cwd();
 const normalizeString = (str: string) => slugify(str, { lower: true, strict: true });
 
 const askForInput = async (data: { message: string, normalize?: boolean, defaultValue?: string, required?: boolean }) => {
-  const { message, normalize = false, required = false, defaultValue = undefined } = data
+  const { message, normalize = false, required = false, defaultValue = undefined } = data;
   const answerRaw = await input({ message: `${message}:`, default: defaultValue, required });
   if (!normalize) {
     return answerRaw;
@@ -24,68 +24,38 @@ const askForInput = async (data: { message: string, normalize?: boolean, default
     }
   }
   return answer;
-}
+};
 
-const checkIfPoetryExists = () => {
+const checkIfCommandExists = (command: string) => {
   try {
-    execSync('poetry --version', { stdio: 'ignore' });
-    console.log('Poetry is installed.');
+    execSync(`${command} --version`, { stdio: 'ignore' });
+    console.log(`${command} is installed.`);
   } catch (error) {
-    console.error('Poetry is not installed. Please install Poetry first: https://python-poetry.org/docs/#installation');
+    console.error(`${command} is not installed. Please install ${command} first.`);
     process.exit(1);
   }
-}
+};
 
-const runPoetryInstall = (projectDir: string) => {
-  try {
-    console.log('Installing dependencies using Poetry...');
-    execSync('poetry install', { cwd: projectDir, stdio: 'inherit' });
-    console.log('Dependencies installed successfully.');
-  } catch (error) {
-    console.error('Failed to install dependencies with Poetry.');
-    process.exit(1);
-  }
-}
+const runCommand = (command: string, options: { cwd: string, stdio: 'inherit' }) => {
+  execSync(command, options);
+};
 
-async function generate() {
-  
-  const projectName = await askForInput({ message: 'Project name', normalize: true, required: true });
-  const projectDescription = await askForInput({ message: 'Project description' });
-  const author = await askForInput({ message: 'Author' });
-  const postgresUser = await askForInput({ message: 'Postgresql useraname', defaultValue: 'root' });
-  const postgresPassword = await askForInput({ message: 'Postgresql password', defaultValue: 'root' });
-  const postgresDatabase = await askForInput({ message: 'Postgresql database name', defaultValue: 'db' });
-  const dockerHubRegistryName = await askForInput({ message: 'DockerHub registry name' });
-  const dockerHubLoginToken = await askForInput({ message: 'DockerHub login token' });
-  
-  const templateDir = TEMPLATE_DIR;
-  const projectDir = path.join(CURRENT_DIR, projectName);
-  const serverDir = path.join(CURRENT_DIR, projectName, 'server');
-  const clientDir = path.join(CURRENT_DIR, projectName, 'src');
-
-  fs.mkdirSync(projectDir);
-  fs.copySync(templateDir, projectDir);
-
-  // Define the content of the .env file
-  const envContent = `
-PROJECT_NAME=${projectName}
-POSTGRES_HOST=127.0.0.1
-POSTGRES_USER=${postgresUser}
-POSTGRES_PASSWORD=${postgresPassword}
-POSTGRES_DB=${postgresDatabase}
-DOCKER_REGISTRY_NAME=${dockerHubRegistryName}
-DOCKER_LOGIN_TOKEN=${dockerHubLoginToken}
-`.trim();
-
+const writeEnvFile = (projectDir: string, envData: { [key: string]: string }) => {
+  const envContent = Object.entries(envData)
+    .map(([key, value]) => `${key}=${value}`)
+    .join('\n')
+    .trim();
   const envFilePath = path.join(projectDir, '.env');
   fs.writeFileSync(envFilePath, envContent);
+};
 
+const writePyProjectFile = (serverDir: string, pyProjectData: { name: string, description: string, author: string }) => {
   const pyProjectContent = `
 [tool.poetry]
-name = "${projectName}"
+name = "${pyProjectData.name}"
 version = "0.0.1"
-description = "${projectDescription}"
-authors = ["${author}"]
+description = "${pyProjectData.description}"
+authors = ["${pyProjectData.author}"]
 readme = "README.md"
 package-mode = false
 
@@ -105,25 +75,48 @@ build-backend = "poetry.core.masonry.api"
 
   const pyProjectPath = path.join(serverDir, 'pyproject.toml');
   fs.writeFileSync(pyProjectPath, pyProjectContent);
+};
 
-  // Replace placeholders in files
-  const filesToRename = fs.readdirSync(projectDir);
-  filesToRename.forEach(file => {
-    const filePath = path.join(projectDir, file);
-    if (fs.lstatSync(filePath).isFile()) {
-      const content = fs.readFileSync(filePath, 'utf8');
-      const rendered = ejs.render(content, { projectName });
-      fs.writeFileSync(filePath, rendered);
-    }
+async function generate() {
+  const projectName = await askForInput({ message: 'Project name', normalize: true, required: true });
+  const projectDescription = await askForInput({ message: 'Project description' });
+  const author = await askForInput({ message: 'Author' });
+  const postgresUser = await askForInput({ message: 'Postgresql username', defaultValue: 'root' });
+  const postgresPassword = await askForInput({ message: 'Postgresql password', defaultValue: 'root' });
+  const postgresDatabase = await askForInput({ message: 'Postgresql database name', defaultValue: 'db' });
+  const dockerHubRegistryName = await askForInput({ message: 'DockerHub registry name' });
+  const dockerHubLoginToken = await askForInput({ message: 'DockerHub login token' });
+
+  const projectDir = path.join(CURRENT_DIR, projectName);
+  const serverDir = path.join(projectDir, 'server');
+  const clientDir = path.join(projectDir, 'client');
+  const temporaryClientDir = path.join(CURRENT_DIR, projectName, projectName);
+
+  fs.mkdirSync(projectDir);
+  fs.copySync(TEMPLATE_DIR, projectDir);
+  
+  writeEnvFile(projectDir, {
+    PROJECT_NAME: projectName,
+    POSTGRES_HOST: '127.0.0.1',
+    POSTGRES_USER: postgresUser,
+    POSTGRES_PASSWORD: postgresPassword,
+    POSTGRES_DB: postgresDatabase,
+    DOCKER_REGISTRY_NAME: dockerHubRegistryName,
+    DOCKER_LOGIN_TOKEN: dockerHubLoginToken
   });
+
+  writePyProjectFile(serverDir, { name: projectName, description: projectDescription, author });
 
   console.log(`Project ${projectName} created successfully.`);
 
-  // Check if Poetry is installed
-  checkIfPoetryExists();
+  checkIfCommandExists('poetry');
+  runCommand('poetry install', { cwd: serverDir, stdio: 'inherit' });
 
-  // Enter the project directory and run `poetry install`
-  runPoetryInstall(serverDir);
+  checkIfCommandExists('npm');
+  runCommand(`npm create vite@latest ${projectName} -- --template react`, { cwd: projectName, stdio: 'inherit' });
+  runCommand(`npm install`, { cwd: temporaryClientDir, stdio: 'inherit' });
+  fs.move(temporaryClientDir, clientDir);
+
 }
 
 generate();
