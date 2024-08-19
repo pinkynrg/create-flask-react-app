@@ -69,6 +69,7 @@ const checkIfCommandExists = (command: string): void => {
  * @param {Object} options - Options for execSync, such as cwd and stdio.
  */
 const runCommand = (command: string, options: { cwd: string; stdio: 'inherit' }): void => {
+  console.log(command);
   execSync(command, options);
 };
 
@@ -170,10 +171,21 @@ async function generate(): Promise<void> {
   // Install basic npm packages
   runCommand(`npm install`, { cwd: clientDir, stdio: 'inherit' });
 
-  // Install additional useful npm packages
-  ['moment', 'axios'].forEach((pkg: string) => {
-    runCommand(`npm install ${pkg}`, { cwd: clientDir, stdio: 'inherit' });
-  });
+  // Install Airbnb ESLint config
+  runCommand('npx install-peerdeps --dev eslint-config-airbnb', { cwd: clientDir, stdio: 'inherit' })
+
+  const packages = [
+    { name: 'axios', version: '1.7.4', devDependency: false },
+    { name: 'moment', version: '2.30.1', devDependency: false },
+    { name: 'eslint-plugin-prefer-arrow', version: '1.2.3', devDependency: true },
+  ];
+  
+  packages.forEach((pkg) => {
+    const command = pkg.devDependency 
+      ? `npm install ${pkg.name}@${pkg.version} --save-dev` 
+      : `npm install ${pkg.name}@${pkg.version} --save`;
+      runCommand(command, { cwd: clientDir, stdio: 'inherit' });
+    });
 
   console.log(`Project ${userInput.projectName} created successfully.`);
 }
