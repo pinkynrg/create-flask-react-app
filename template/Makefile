@@ -18,4 +18,4 @@ start_db:
 	docker compose -f docker-compose.development.yml up
 
 start: 
-	npx concurrently --names 'frontend, backend, db' -c 'bgBlue.bold,bgMagenta.bold,bgGreen.bold' "make start_client" "make start_server" "make start_db"
+	npx concurrently --names 'frontend,backend ,db      ' -c 'bgBlue.bold,bgMagenta.bold,bgGreen.bold' "make start_client" "make start_server" "make start_db"
