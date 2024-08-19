@@ -1,6 +1,6 @@
 {
   "name": "create-flask-react-app",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Create a flask react application quickly",
   "main": "index.js",
   "bin": {
