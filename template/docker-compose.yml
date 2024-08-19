@@ -17,4 +17,4 @@ services:
       POSTGRES_DB: $POSTGRES_DB
     restart: always
     ports:
-      - "3000:5000"
+      - "5000:5000"

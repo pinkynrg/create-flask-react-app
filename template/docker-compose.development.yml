@@ -21,6 +21,6 @@ services:
       POSTGRES_DB: $POSTGRES_DB
     restart: always
     volumes:
-      - .:/app
+      - ./server/:/server
     ports:
       - "5000:5000"
