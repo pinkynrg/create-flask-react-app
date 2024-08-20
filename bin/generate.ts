@@ -54,23 +54,23 @@ const askForInput = async (data: {
 /**
  * Run a shell command in a specified directory.
  * @param {string} command - The command to run.
+ * @param {string} errorMessage - The error message to display if the command fails.
  * @param {Object} options - Options for execSync, such as cwd and stdio.
  */
-const runCommand = (command: string, options: { cwd: string, output?: boolean }): Promise<void> => {
+const runCommand = (command: string, options: { cwd: string, output?: boolean }, errorMessage?: string): Promise<void> => {
   const spinner = ora(`Running: ${command}`).start();
 
   return new Promise((resolve, reject) => {
     exec(command, options, (error, stdout, stderr) => {
       if (error) {
-        spinner.fail(`Failed: ${command}`);
-        console.error(stderr);
+        spinner.fail(errorMessage ? `Failed: ${command} - ${errorMessage}` : `Failed: ${command}`);
         reject(error);  // Reject the promise with the error
         return;
       }
       spinner.succeed(`Completed: ${command}`);
-      if (!!options.output) {
-        console.log(stdout)
-      }
+      // if (!!options.output) {
+        // console.log(stdout)
+      // }
       resolve();  // Resolve the promise successfully
     });
   });
@@ -131,9 +131,13 @@ const copyAndReplacePlaceholders = (sourceDir: string, destDir: string, replacem
  */
 async function generate(): Promise<void> {
   // Check required commands are installed
-  await runCommand('docker --version', { cwd: CURRENT_DIR, output: true });
-  await runCommand('poetry --version', { cwd: CURRENT_DIR, output: true });
-  await runCommand('npm --version', { cwd: CURRENT_DIR, output: true });
+  await runCommand('docker --version', { cwd: CURRENT_DIR, output: true }, 'Docker is required to be installed');
+  await runCommand('poetry --version', { cwd: CURRENT_DIR, output: true }, 'Poetry is required to be installed');
+  await runCommand('pyenv --version', { cwd: CURRENT_DIR, output: true }, 'Pyenv is required to be installed');
+  await runCommand('npm --version', { cwd: CURRENT_DIR, output: true }), 'NPM is required to be installed';
+
+  // check docker daemon is running
+  await runCommand('docker ps', { cwd: CURRENT_DIR, output: true }, 'Docker daemon is required to be running');
 
   nextLine();
 
