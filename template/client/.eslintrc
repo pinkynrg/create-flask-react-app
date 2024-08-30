@@ -35,6 +35,7 @@
     "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["draft"] }],
     "prefer-arrow/prefer-arrow-functions": ["error"],
     "@typescript-eslint/no-explicit-any": "error",
+    "import/no-absolute-path": "off",
     "semi": ["error", "never"]
   },
   "overrides": [
