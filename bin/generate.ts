@@ -145,7 +145,7 @@ async function generate(): Promise<void> {
   const userInput = {
     serverPort: '5000',
     serverHost: '127.0.0.1',
-    projectName: await askForInput({ message: 'Project name', normalize: true, required: true }),
+    projectName: await askForInput({ message: 'Project name', normalize: true, defaultValue: 'myProject' }),
     projectDescription: await askForInput({ message: 'Project description' }),
     author: await askForInput({ message: 'Author' }),
     postgresHost: '127.0.0.1',

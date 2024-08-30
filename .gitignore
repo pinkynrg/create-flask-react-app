@@ -13,4 +13,8 @@ dist/
 # macOS files
 .DS_Store
 
+# Python
 __pycache__/
+
+# Default project for tests
+myProject/*
