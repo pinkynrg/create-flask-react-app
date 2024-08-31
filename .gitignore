@@ -17,4 +17,4 @@ dist/
 __pycache__/
 
 # Default project for tests
-myProject/*
+myProject

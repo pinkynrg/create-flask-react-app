@@ -1,3 +1,5 @@
+# from server import db
+
 # Example model class with various field types
 # This class is just an example and should be replaced with your actual model.
 
