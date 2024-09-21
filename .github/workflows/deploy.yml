@@ -2,8 +2,6 @@ name: Publish NPM Package
 
 on:
   push:
-    branches:
-      - main
 
 jobs:
   release:
@@ -29,8 +27,16 @@ jobs:
 
       - name: Generate version and changelog
         run: |
-          npx standard-version
-          git push --follow-tags origin main
+          git fetch --unshallow --no-tags
+          git config --global user.email "<github-actions[bot]@users.noreply.github.com>"
+          git config --global user.name "GitHub Actions"
+          CURRENT_BRANCH=$(git branch --show-current)
+            if [ "$CURRENT_BRANCH" == "main" ]; then
+              npx standard-version
+            else
+              npx standard-version --prerelease "$(echo $CURRENT_BRANCH | sed 's/\//-/g')"
+            fi
+            git push --follow-tags origin "$CURRENT_BRANCH"
 
       - name: Install dependencies
         run: npm run build
