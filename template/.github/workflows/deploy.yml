@@ -14,6 +14,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Building Docker image for frontend
+        id: frontend
+        env:
+          REGISTRY_NAME: ${{ secrets.DOCKER_REGISTRY_NAME }}
+          REPOSITORY_NAME: ${{ secrets.PROJECT_NAME }}-frontend
+          IMAGE_TAG: ${{ github.sha }}
+        run: |
+          docker build -f Dockerfile.frontend -t $REGISTRY_NAME/$REPOSITORY_NAME:$IMAGE_TAG -t $REGISTRY_NAME/$REPOSITORY_NAME:latest .
+          echo "Pushing image to Registry..."
+          docker login -u ${{ secrets.DOCKER_REGISTRY_NAME }} -p ${{ secrets.DOCKER_HUB_LOGIN_TOKEN }}
+          docker push $REGISTRY_NAME/$REPOSITORY_NAME:$IMAGE_TAG
+          docker push $REGISTRY_NAME/$REPOSITORY_NAME:latest
+          echo "::set-output name=image::$REGISTRY_NAME/$REPOSITORY_NAME:$IMAGE_TAG"
+
       - name: Building Docker image for backend
         id: backend
         env:
