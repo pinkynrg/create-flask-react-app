@@ -1,6 +1,7 @@
 name: Deploy
 
 on:
+  workflow_dispatch:
   push:
     branches: [ main ]
 
@@ -17,7 +18,7 @@ jobs:
         id: backend
         env:
           REGISTRY_NAME: ${{ secrets.DOCKER_REGISTRY_NAME }}
-          REPOSITORY_NAME: ${{ secrets.PROJECT_NAME }})-backend
+          REPOSITORY_NAME: ${{ secrets.PROJECT_NAME }}-backend
           IMAGE_TAG: ${{ github.sha }}
         run: |
           docker build -f Dockerfile.backend -t $REGISTRY_NAME/$REPOSITORY_NAME:$IMAGE_TAG -t $REGISTRY_NAME/$REPOSITORY_NAME:latest .
