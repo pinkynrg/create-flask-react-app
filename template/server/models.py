@@ -4,6 +4,7 @@
 # This class is just an example and should be replaced with your actual model.
 
 # class Item(db.Model):
+#     __table_args__ = {'extend_existing': True}  # This is to allow ccreation of migrations when table already exists
 #     id = db.Column(db.Integer, primary_key=True)  # Auto-incrementing primary key (integer)
 #     name = db.Column(db.String(100), nullable=False)  # String field with max length 100, not nullable
 #     expiration_date = db.Column(db.Date, nullable=False)  # Date field, not nullable

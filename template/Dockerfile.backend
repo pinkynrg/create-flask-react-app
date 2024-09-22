@@ -6,8 +6,6 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 ENV PYTHONPATH=server
 
-RUN apt update && apt install -y build-essential
-
 # Install Poetry
 RUN pip install --no-cache-dir poetry
 

@@ -14,7 +14,6 @@ export default ({mode}: {mode: string}) => {
         '/api': {
           target: `http://${env.SERVER_HOST}:${env.SERVER_PORT}`,
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api/, ''),
         },
       }
     }
