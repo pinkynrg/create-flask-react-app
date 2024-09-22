@@ -206,6 +206,18 @@ async function generate(): Promise<void> {
   await runCommand('npm uninstall @eslint/js', { cwd: clientDir })  
   await runCommand('rm eslint.config.js', { cwd: clientDir })
 
+  // create .gitignore file
+  const gitignore = `
+db_data
+.DS_Store
+node_modules
+__pycache__
+client/dist
+.env
+`
+
+  fs.writeFileSync(path.join(projectDir, '.gitignore'), gitignore);
+
   console.log(`Project ${userInput.projectName} created successfully.`);
 }
 
