@@ -1,6 +1,20 @@
-db_data
+# Node.js dependencies
+node_modules/
+
+# Logs
+*.log
+
+# Compiled output
+dist/
+
+# TypeScript
+*.tsbuildinfo
+
+# macOS files
 .DS_Store
-node_modules
-.env
-__pycache__
-client/dist
+
+# Python
+__pycache__/
+
+# Default project for tests
+myProject
